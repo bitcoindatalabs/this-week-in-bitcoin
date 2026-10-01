@@ -13,14 +13,15 @@
 
     <style>
         :root {
-            --bg-color: #ECEED9;
+            --bg-color: #F1F2DC;
             --box-bg: #E5E7CC;
-            --box-border: #D8DAB8;
+            --box-border: #D0D3B0;
             --accent-green: #2E6930;
-            --accent-orange: #C85A17;
+            --accent-orange: #E8916B;
             --accent-blue: #245A82;
-            --text-dark: #1A1E24;
-            --text-muted: #555A64;
+            --text-dark: #1A1D24;
+            --text-muted: #4A4E57;
+            --dim-text: #6B707B;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             --font-serif: 'Instrument Serif', Georgia, serif;
         }
@@ -31,10 +32,11 @@
 
         body {
             margin: 0;
-            padding: 30px;
-            background-color: #2B2D31;
+            padding: 0;
+            background-color: var(--bg-color);
             display: flex;
             justify-content: center;
+            align-items: center;
             font-family: var(--font-sans);
             -webkit-font-smoothing: antialiased;
         }
@@ -44,15 +46,15 @@
             height: 800px;
             box-sizing: border-box;
             background-color: var(--bg-color);
-            border: 1px solid #D8DAB8;
-            border-radius: 14px;
+            border: none;
+            border-radius: 0;
             padding: 24px 34px 18px 34px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+            box-shadow: none;
         }
 
         /* Top Header */
@@ -115,16 +117,14 @@
             gap: 6px;
         }
 
-        .logo-dots {
+        .bdl-brand-mark {
             display: flex;
-            gap: 5px;
             align-items: center;
-        }
-
-        .logo-dot {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
+            justify-content: center;
+            padding: 3px 6px;
+            background: #E5E7CC;
+            border: 1px solid #C8CAB0;
+            border-radius: 6px;
         }
 
         /* Active Participants Strip */
@@ -409,10 +409,14 @@
                         <i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i>
                         <span id="mcard-decisions-count">--</span>
                     </div>
-                    <div class="logo-dots">
-                        <span class="logo-dot" style="background-color: #E8916B;"></span>
-                        <span class="logo-dot" style="background-color: #388E3C;"></span>
-                        <span class="logo-dot" style="background-color: #2196F3;"></span>
+                    <div class="bdl-brand-mark" title="Bitcoin Data Labs">
+                        <svg width="30" height="18" viewBox="890 35 460 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="929" y1="120" x2="1111" y2="140" stroke="#7A808A" stroke-width="16" stroke-linecap="round"/>
+                            <line x1="1111" y1="140" x2="1323" y2="65" stroke="#7A808A" stroke-width="16" stroke-linecap="round"/>
+                            <circle cx="929" cy="120" r="36" fill="#E8916B"/>
+                            <circle cx="1111" cy="140" r="36" fill="#2196F3"/>
+                            <circle cx="1323" cy="65" r="36" fill="#388E3C"/>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -420,8 +424,8 @@
             <!-- Active Participants Strip -->
             <div class="active-participants-strip" id="mcard-participants-strip">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <span class="participants-label"><i class="fa-solid fa-comments" style="color: var(--accent-orange);"></i> Active Discussion Participants <span style="letter-spacing: 0; font-weight: 700; color: #2A2E37;">(<span id="mcard-active-count">0</span>)</span>:</span>
-                    <span style="font-size: 10.5px; color: #6A6E77; font-weight: 500;">IRC #bitcoin-core-dev</span>
+                    <span class="participants-label"><i class="fa-solid fa-users" style="color: var(--accent-orange);"></i> Active Discussion Participants <span style="letter-spacing: 0; font-weight: 700; color: #2A2E37;">(<span id="mcard-active-count">0</span>)</span>:</span>
+                    <span style="font-size: 10.5px; color: #6A6E77; font-weight: 600;"><i class="fa-regular fa-clock" style="color: var(--accent-orange); margin-right: 4px;"></i>Thursdays 19:00 UTC</span>
                 </div>
                 <div class="dev-pills-row" id="mcard-dev-pills">
                     <span class="dev-handle-pill">Loading contributors...</span>
