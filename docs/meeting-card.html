@@ -420,8 +420,8 @@
             <!-- Active Participants Strip -->
             <div class="active-participants-strip" id="mcard-participants-strip">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                    <span class="participants-label"><i class="fa-solid fa-users" style="color: var(--accent-orange);"></i> Active Sync Participants <span style="letter-spacing: 0; font-weight: 700; color: #2A2E37;">(<span id="mcard-active-count">0</span>)</span>:</span>
-                    <span style="font-size: 10.5px; color: #6A6E77; font-weight: 500;">Libera.chat #bitcoin-core-dev</span>
+                    <span class="participants-label"><i class="fa-solid fa-comments" style="color: var(--accent-orange);"></i> Active Discussion Participants <span style="letter-spacing: 0; font-weight: 700; color: #2A2E37;">(<span id="mcard-active-count">0</span>)</span>:</span>
+                    <span style="font-size: 10.5px; color: #6A6E77; font-weight: 500;">IRC #bitcoin-core-dev</span>
                 </div>
                 <div class="dev-pills-row" id="mcard-dev-pills">
                     <span class="dev-handle-pill">Loading contributors...</span>
@@ -600,10 +600,14 @@
                 const spotlightTextEl = document.getElementById('mcard-spotlight-text');
                 const spotlightBoxEl = document.getElementById('mcard-spotlight-box');
                 if (spotlightTextEl && spotlightBoxEl) {
-                    // Check if AI review debate is present in meeting
-                    const aiTopic = (meeting.topics_discussed || []).find(t => t.toLowerCase().includes('automated ai') || t.toLowerCase().includes('ai reviews'));
-                    if (aiTopic) {
-                        spotlightTextEl.innerHTML = `<strong>PR AI Reviews Debate:</strong> willcl-ark proposed opt-in AI reviews via ralph bot (git.fish.foo). andrewtoth and abubakarsadiq cautioned that unfiltered LLM reviews create maintainer noise.`;
+                    if (meeting.spotlight_debate) {
+                        let text = meeting.spotlight_debate.replace(/https?:\/\/\S+/g, '').trim();
+                        if (text.includes(':')) {
+                            const [head, rest] = text.split(':', 1);
+                            spotlightTextEl.innerHTML = `<strong>${head.trim()}:</strong> ${text.substring(head.length + 1).trim()}`;
+                        } else {
+                            spotlightTextEl.innerHTML = text;
+                        }
                         spotlightBoxEl.style.display = 'block';
                     } else if (meeting.x_priority_takeaway) {
                         spotlightTextEl.innerHTML = `<strong>Focus Priority:</strong> ${meeting.x_priority_takeaway}`;
