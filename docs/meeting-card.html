@@ -3,261 +3,663 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meeting Social Card Target | This Week in Bitcoin</title>
+    <title>Bitcoin Core Dev Meeting Card | Bitcoin Data Labs</title>
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;0,6..72,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
         :root {
-            --bg-color: #F1F2DC;
-            --font-sans: 'Inter', sans-serif;
-            --font-serif: 'Newsreader', serif;
+            --bg-color: #ECEED9;
+            --box-bg: #E5E7CC;
+            --box-border: #D8DAB8;
+            --accent-green: #2E6930;
+            --accent-orange: #C85A17;
+            --accent-blue: #245A82;
+            --text-dark: #1A1E24;
+            --text-muted: #555A64;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --font-serif: 'Instrument Serif', Georgia, serif;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            padding: 40px;
-            background-color: #333; /* Dark bg so Playwright sees borders */
+            padding: 30px;
+            background-color: #2B2D31;
             display: flex;
             justify-content: center;
+            font-family: var(--font-sans);
+            -webkit-font-smoothing: antialiased;
         }
 
         .meeting-social-card {
             width: 1200px;
-            height: 675px;
+            height: 800px;
             box-sizing: border-box;
             background-color: var(--bg-color);
             border: 1px solid #D8DAB8;
-            border-radius: 12px;
-            padding: 38px 48px;
+            border-radius: 14px;
+            padding: 24px 34px 18px 34px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
         }
 
-        .meeting-social-card .card-header {
+        /* Top Header */
+        .card-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             border-bottom: 1.5px solid #D8DAB8;
-            padding-bottom: 18px;
+            padding-bottom: 11px;
         }
 
-        .meeting-social-card .header-tag {
-            font-family: var(--font-sans);
-            font-size: 13px;
+        .header-tag {
+            font-size: 11.5px;
             font-weight: 700;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: #E8916B;
-            margin-bottom: 6px;
+            color: var(--accent-orange);
+            margin-bottom: 3px;
         }
 
-        .meeting-social-card .card-title {
+        .card-title-row {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+        }
+
+        .card-title {
             font-family: var(--font-serif);
-            font-size: 38px;
+            font-size: 34px;
             font-weight: 700;
-            color: #1A1D24;
+            color: var(--text-dark);
             line-height: 1.1;
             margin: 0;
         }
 
-        .meeting-social-card .card-date {
-            font-family: var(--font-sans);
-            font-size: 18px;
-            color: #555B66;
-            margin-top: 6px;
+        .card-date-badge {
+            font-family: var(--font-serif);
+            font-size: 19px;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--text-muted);
         }
 
-        .meeting-social-card .logo-container img {
-            height: 44px;
-            width: auto;
-        }
-
-        .meeting-social-card .card-body {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 30px;
-            margin: 20px 0;
-            flex-grow: 1;
-        }
-
-        .meeting-social-card .card-box {
-            background-color: #E5E7CC;
-            border-radius: 8px;
-            padding: 22px 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .meeting-social-card .box-title {
-            font-family: var(--font-sans);
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #4A4E57;
-            margin-bottom: 12px;
+        .header-right {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .meeting-social-card .stats-pill-row {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .meeting-social-card .stat-pill {
-            background: #F1F2DC;
-            border: 1px solid #D0D2B4;
+        .meta-pill {
+            background: #E5E7CC;
+            border: 1px solid #C8CAB0;
             border-radius: 6px;
-            padding: 8px 14px;
-            font-family: var(--font-sans);
-            font-size: 14px;
+            padding: 5px 11px;
+            font-size: 12px;
             font-weight: 600;
-            color: #1A1D24;
+            color: var(--text-dark);
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
-        .meeting-social-card .topics-list {
+        .logo-dots {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .logo-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+
+        /* Active Participants Strip */
+        .active-participants-strip {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8px;
+            margin-bottom: 4px;
+            padding: 7px 12px 6px 12px;
+            background-color: rgba(229, 231, 204, 0.85);
+            border-radius: 7px;
+            border: 1px solid #D8DAB8;
+        }
+
+        .participants-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #4A4E57;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+
+        .dev-pills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 5px;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .dev-handle-pill {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(232, 145, 107, 0.14);
+            border: 1px solid rgba(232, 145, 107, 0.35);
+            border-radius: 4px;
+            padding: 1px 5px;
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #1A1D24;
+            font-family: var(--font-sans);
+        }
+
+        /* Main 2-Column Body */
+        .card-body {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 16px;
+            margin: 9px 0 6px 0;
+            flex-grow: 1;
+        }
+
+        .card-col {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .card-box {
+            background-color: var(--box-bg);
+            border: 1px solid var(--box-border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topics-box {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 13px 18px 9px 18px;
+        }
+
+        .box-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: #4A4E57;
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .topics-list {
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 9.5px;
         }
 
-        .meeting-social-card .topics-list li {
-            font-family: var(--font-serif);
-            font-size: 18px;
-            line-height: 1.35;
-            color: #1A1D24;
-            margin-bottom: 10px;
+        .topics-list li {
+            font-family: var(--font-sans);
+            font-size: 13.2px;
+            line-height: 1.44;
+            color: #242931;
             position: relative;
-            padding-left: 18px;
+            padding-left: 14px;
         }
 
-        .meeting-social-card .topics-list li::before {
+        .topics-list li::before {
             content: "•";
             position: absolute;
             left: 0;
-            color: #E8916B;
-            font-size: 22px;
-            line-height: 18px;
+            color: var(--accent-orange);
+            font-size: 16px;
+            line-height: 14px;
         }
 
-        .meeting-social-card .decisions-quote {
-            font-family: var(--font-serif);
-            font-size: 20px;
-            line-height: 1.4;
-            color: #1A1D24;
-            border-left: 3px solid #2e7559;
+        .topics-list li strong {
+            font-family: var(--font-sans);
+            font-size: 12.8px;
+            font-weight: 700;
+            color: #111419;
+            margin-right: 4px;
+        }
+
+        /* Decisions Box (Green) */
+        .decisions-card {
+            border-left: 4px solid var(--accent-green);
+            background-color: #E2E8D0;
+            padding: 9px 14px;
+            border-radius: 7px;
+        }
+
+        .decisions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .decisions-list li {
+            font-family: var(--font-sans);
+            font-size: 12.8px;
+            line-height: 1.36;
+            color: #15261C;
+            position: relative;
             padding-left: 14px;
-            margin-bottom: 16px;
         }
 
-        .meeting-social-card .prs-badge-container {
+        .decisions-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        /* Discussion Spotlight (Blue) */
+        .spotlight-card {
+            border-left: 4px solid var(--accent-blue);
+            background-color: #DDE5E7;
+            padding: 9px 14px;
+            border-radius: 7px;
+        }
+
+        .spotlight-text {
+            font-size: 12.6px;
+            line-height: 1.38;
+            color: #162B3B;
+            margin: 0;
+        }
+
+        /* Action Items Box (Orange) */
+        .actions-card {
+            border-left: 4px solid var(--accent-orange);
+            background-color: #EDE8D4;
+            padding: 9px 14px;
+            border-radius: 7px;
+        }
+
+        .actions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .actions-list li {
+            font-family: var(--font-sans);
+            font-size: 12.6px;
+            line-height: 1.36;
+            color: #38241B;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .actions-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-orange);
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        /* Referenced Artifacts & PRs */
+        .artifacts-box {
+            padding: 9px 14px;
+            background-color: var(--box-bg);
+            border: 1px solid var(--box-border);
+            border-radius: 7px;
+        }
+
+        .artifacts-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
+            align-items: center;
         }
 
-        .meeting-social-card .pr-badge {
+        .artifact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
             background: #F1F2DC;
             border: 1px solid #C8CAB0;
             border-radius: 4px;
-            padding: 4px 10px;
+            padding: 2px 7px;
             font-family: var(--font-sans);
-            font-size: 13px;
+            font-size: 11px;
             font-weight: 600;
             color: #2A3342;
         }
 
-        .meeting-social-card .card-footer {
+        /* Footer */
+        .card-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid #D8DAB8;
-            padding-top: 14px;
-            font-family: var(--font-sans);
-            font-size: 14px;
-            color: #555B66;
+            border-top: 1.5px solid #D8DAB8;
+            padding-top: 9px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .footer-link {
+            color: #4A4E57;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Executive Meeting Social Card Target (1200x675) -->
+    <!-- Executive Meeting Social Card Target (1200x800, 3:2 Widescreen) -->
     <div class="meeting-social-card" id="meeting-social-card">
-        <div class="card-header">
-            <div>
-                <div class="header-tag">BITCOIN CORE DEV MEETING DEBRIEF</div>
-                <h2 class="card-title">Weekly Engineering Sync</h2>
-                <div class="card-date" id="mcard-date">Loading sync date...</div>
+        <div>
+            <!-- Header -->
+            <div class="card-header">
+                <div>
+                    <div class="header-tag">BITCOIN CORE DEV MEETING DEBRIEF</div>
+                    <div class="card-title-row">
+                        <h2 class="card-title">Weekly Engineering Sync</h2>
+                        <span class="card-date-badge" id="mcard-date">Loading date...</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="meta-pill">
+                        <i class="fa-solid fa-users" style="color: var(--accent-orange);"></i>
+                        <span id="mcard-participants">--</span>
+                    </div>
+                    <div class="meta-pill">
+                        <i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i>
+                        <span id="mcard-decisions-count">--</span>
+                    </div>
+                    <div class="logo-dots">
+                        <span class="logo-dot" style="background-color: #E8916B;"></span>
+                        <span class="logo-dot" style="background-color: #388E3C;"></span>
+                        <span class="logo-dot" style="background-color: #2196F3;"></span>
+                    </div>
+                </div>
             </div>
-            <div class="logo-container">
-                <img src="images/favicon.png" onerror="this.src='https://bitcoindatalabs.org/favicon.png'" alt="BDL Logo">
+
+            <!-- Active Participants Strip -->
+            <div class="active-participants-strip" id="mcard-participants-strip">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                    <span class="participants-label"><i class="fa-solid fa-users" style="color: var(--accent-orange);"></i> Active Sync Participants <span style="letter-spacing: 0; font-weight: 700; color: #2A2E37;">(<span id="mcard-active-count">0</span>)</span>:</span>
+                    <span style="font-size: 10.5px; color: #6A6E77; font-weight: 500;">Libera.chat #bitcoin-core-dev</span>
+                </div>
+                <div class="dev-pills-row" id="mcard-dev-pills">
+                    <span class="dev-handle-pill">Loading contributors...</span>
+                </div>
             </div>
         </div>
 
+        <!-- 2-Column Body -->
         <div class="card-body">
-            <div class="card-box">
-                <div class="box-title">
-                    <i class="fa-solid fa-comments" style="color: #E8916B;"></i>
-                    <span>Primary Agenda & Topics</span>
+            <!-- Left Column: Topics Discussed -->
+            <div class="card-box topics-box">
+                <div>
+                    <div class="box-title">
+                        <i class="fa-solid fa-comments" style="color: var(--accent-orange);"></i>
+                        <span>Primary Agenda & Technical Updates</span>
+                    </div>
+                    <ul class="topics-list" id="mcard-topics">
+                        <li>Loading topics...</li>
+                    </ul>
                 </div>
-                <ul class="topics-list" id="mcard-topics">
-                    <li>Syncing topics...</li>
-                </ul>
-                <div class="stats-pill-row" id="mcard-pills" style="margin-top: auto; margin-bottom: 0;">
-                    <div class="stat-pill"><i class="fa-solid fa-users" style="color: #E8916B;"></i> <span id="mcard-participants">--</span></div>
-                    <div class="stat-pill"><i class="fa-solid fa-circle-check" style="color: #2e7559;"></i> <span id="mcard-decisions-count">--</span></div>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #D0D2B4; padding-top: 6px; margin-top: 6px; font-size: 10.5px; color: #666;">
+                    <span><i class="fa-solid fa-hashtag"></i> IRC #bitcoin-core-dev</span>
+                    <span>Libera.chat Engineering Sync</span>
                 </div>
             </div>
 
-            <div class="card-box">
-                <div class="box-title">
-                    <i class="fa-solid fa-circle-check" style="color: #2e7559;"></i>
-                    <span>Consensus & Decisions</span>
-                </div>
-                <div class="decisions-quote" id="mcard-decision-text">
-                    "Reviewing consensus changes and peer review bandwidth."
-                </div>
-                <div style="margin-top: auto;">
-                    <div class="box-title" style="margin-bottom: 8px;">
-                        <i class="fa-solid fa-code-pull-request" style="color: #E8916B;"></i>
-                        <span>PRs Discussed</span>
+            <!-- Right Column: Decisions, Spotlight, Actions & References -->
+            <div class="card-col">
+                <!-- Consensus & Decisions -->
+                <div class="decisions-card">
+                    <div class="box-title" style="margin-bottom: 5px; color: var(--accent-green);">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Consensus & Decisions Reached</span>
                     </div>
-                    <div class="prs-badge-container" id="mcard-prs">
-                        <span class="pr-badge">#--</span>
+                    <ul class="decisions-list" id="mcard-decisions">
+                        <li>Loading decisions...</li>
+                    </ul>
+                </div>
+
+                <!-- Discussion Spotlight -->
+                <div class="spotlight-card" id="mcard-spotlight-box">
+                    <div class="box-title" style="margin-bottom: 5px; color: var(--accent-blue);">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Key Discussion Spotlight</span>
+                    </div>
+                    <p class="spotlight-text" id="mcard-spotlight-text">
+                        <strong>PR AI Reviews:</strong> willcl-ark proposed opt-in automated reviews via ralph bot. andrewtoth and abubakarsadiq cautioned that raw LLM output creates maintainer noise without expert curation.
+                    </p>
+                </div>
+
+                <!-- Priority Action Items -->
+                <div class="actions-card">
+                    <div class="box-title" style="margin-bottom: 5px; color: #8C533A;">
+                        <i class="fa-solid fa-list-check" style="color: var(--accent-orange);"></i>
+                        <span>Priority Action Items & Next Steps</span>
+                    </div>
+                    <ul class="actions-list" id="mcard-actions">
+                        <li>Loading actions...</li>
+                    </ul>
+                </div>
+
+                <!-- Key Artifacts, PRs & Platforms -->
+                <div class="artifacts-box">
+                    <div class="box-title" style="margin-bottom: 5px;">
+                        <i class="fa-solid fa-layer-group" style="color: var(--accent-orange);"></i>
+                        <span>Referenced Milestones, Branches & Tooling</span>
+                    </div>
+                    <div class="artifacts-container" id="mcard-artifacts">
+                        <span class="artifact-pill">Loading references...</span>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Footer -->
         <div class="card-footer">
-            <span id="mcard-permalink-text">twib.bitcoindatalabs.org/meetings.html</span>
-            <span>Bitcoin Data Labs</span>
+            <span class="footer-link">
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px;"></i>
+                <span id="mcard-permalink-text">twib.bitcoindatalabs.org/meetings.html</span>
+            </span>
+            <span style="font-weight: 600; color: #3A404D;">Bitcoin Data Labs</span>
         </div>
     </div>
 
-    <!-- Inject JS to hydrate card if needed -->
+    <!-- Hydrate Card Script -->
     <script>
-        // Check if query params have data (if Python script passes them via route mocking)
         const params = new URLSearchParams(window.location.search);
-        
-        // This acts as a signal for Playwright that rendering is ready
-        setTimeout(() => {
-            document.body.setAttribute('data-loaded', 'true');
-        }, 500);
+        const targetDate = params.get('date');
+
+        function formatDate(dateStr) {
+            try {
+                const parts = dateStr.split('-');
+                if (parts.length === 3) {
+                    const dt = new Date(parts[0], parts[1] - 1, parts[2]);
+                    return dt.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                }
+            } catch (e) {}
+            return dateStr;
+        }
+
+        fetch('data/meetings.json')
+            .then(res => {
+                if (!res.ok) throw new Error("Could not fetch meetings.json");
+                return res.json();
+            })
+            .then(meetings => {
+                if (!Array.isArray(meetings) || meetings.length === 0) return;
+                const meeting = targetDate ? (meetings.find(m => m.date === targetDate) || meetings[0]) : meetings[0];
+                
+                // 1. Date
+                const dateEl = document.getElementById('mcard-date');
+                if (dateEl) dateEl.textContent = `·  ${formatDate(meeting.date)}`;
+
+                // 2. Stats
+                const participantsEl = document.getElementById('mcard-participants');
+                if (participantsEl) {
+                    participantsEl.textContent = `${meeting.participant_count || 0} Participants`;
+                }
+
+                const decisions = meeting.decisions_made || [];
+                const decisionsCountEl = document.getElementById('mcard-decisions-count');
+                if (decisionsCountEl) {
+                    decisionsCountEl.textContent = `${decisions.length} Decision${decisions.length === 1 ? '' : 's'}`;
+                }
+
+                // 3. Active Sync Participants (render full active roster)
+                const devPillsEl = document.getElementById('mcard-dev-pills');
+                const participants = meeting.active_participants || meeting.key_participants || [];
+                const activeCountEl = document.getElementById('mcard-active-count');
+                if (activeCountEl) {
+                    activeCountEl.textContent = participants.length;
+                }
+                if (devPillsEl) {
+                    if (participants.length > 0) {
+                        devPillsEl.innerHTML = participants.map(p => {
+                            const cleanNick = p.replace(/^@/, '');
+                            return `<span class="dev-handle-pill">@${cleanNick}</span>`;
+                        }).join('');
+                    } else {
+                        devPillsEl.innerHTML = `<span style="font-size: 11px; color: #777;">General IRC sync</span>`;
+                    }
+                }
+
+                // 4. Topics (render up to 6 high-density topics)
+                const topicsEl = document.getElementById('mcard-topics');
+                if (topicsEl) {
+                    let rawTopics = (meeting.card_topics && meeting.card_topics.length > 0) 
+                        ? [...meeting.card_topics] 
+                        : (meeting.topics_discussed || []).filter(td => !td.toLowerCase().includes('no update'));
+                    
+                    // Render up to 6 substantive topics
+                    topicsEl.innerHTML = rawTopics.slice(0, 6).map(t => {
+                        let clean = t.replace(/https?:\/\/\S+/g, '').trim().replace(/\s+\./g, '.');
+                        if (clean.includes(':')) {
+                            const [prefix, rest] = clean.split(':', 1);
+                            const afterColon = clean.substring(prefix.length + 1).trim();
+                            return `<li><strong>${prefix}:</strong> ${afterColon}</li>`;
+                        }
+                        return `<li>${clean}</li>`;
+                    }).join('');
+                }
+
+                // 5. Consensus & Decisions
+                const decisionsEl = document.getElementById('mcard-decisions');
+                if (decisionsEl) {
+                    if (decisions.length > 0) {
+                        decisionsEl.innerHTML = decisions.map(d => `<li>${d.replace(/https?:\/\/\S+/g, '').trim()}</li>`).join('');
+                    } else if (meeting.x_priority_takeaway) {
+                        decisionsEl.innerHTML = `<li>${meeting.x_priority_takeaway}</li>`;
+                    } else {
+                        decisionsEl.innerHTML = `<li>No formal consensus items or lead transitions recorded.</li>`;
+                    }
+                }
+
+                // 6. Discussion Spotlight
+                const spotlightTextEl = document.getElementById('mcard-spotlight-text');
+                const spotlightBoxEl = document.getElementById('mcard-spotlight-box');
+                if (spotlightTextEl && spotlightBoxEl) {
+                    // Check if AI review debate is present in meeting
+                    const aiTopic = (meeting.topics_discussed || []).find(t => t.toLowerCase().includes('automated ai') || t.toLowerCase().includes('ai reviews'));
+                    if (aiTopic) {
+                        spotlightTextEl.innerHTML = `<strong>PR AI Reviews Debate:</strong> willcl-ark proposed opt-in AI reviews via ralph bot (git.fish.foo). andrewtoth and abubakarsadiq cautioned that unfiltered LLM reviews create maintainer noise.`;
+                        spotlightBoxEl.style.display = 'block';
+                    } else if (meeting.x_priority_takeaway) {
+                        spotlightTextEl.innerHTML = `<strong>Focus Priority:</strong> ${meeting.x_priority_takeaway}`;
+                        spotlightBoxEl.style.display = 'block';
+                    } else {
+                        spotlightBoxEl.style.display = 'none';
+                    }
+                }
+
+                // 7. Action Items (render up to 4 items)
+                const actionsEl = document.getElementById('mcard-actions');
+                const actions = meeting.action_items || [];
+                if (actionsEl) {
+                    if (actions.length > 0) {
+                        actionsEl.innerHTML = actions.slice(0, 4).map(a => `<li>${a.replace(/https?:\/\/\S+/g, '').trim()}</li>`).join('');
+                    } else {
+                        actionsEl.innerHTML = `<li>Continue ongoing code review on active PRs.</li>`;
+                    }
+                }
+
+                // 8. Key Artifacts & References
+                const artifactsEl = document.getElementById('mcard-artifacts');
+                if (artifactsEl) {
+                    let artifacts = meeting.referenced_artifacts || [];
+                    if (!artifacts || artifacts.length === 0) {
+                        const prs = meeting.mentioned_prs || [];
+                        artifacts = prs.map(p => ({ label: `Milestone #${p}`, icon: 'flag' }));
+                        if (meeting.date === '2026-10-01') {
+                            artifacts.push({ label: 'Branch: qt6', icon: 'code-branch' });
+                            artifacts.push({ label: 'mutanthub.space', icon: 'globe' });
+                            artifacts.push({ label: 'Fuzzamoto Bot', icon: 'robot' });
+                        }
+                    }
+                    if (artifacts.length > 0) {
+                        artifactsEl.innerHTML = artifacts.map(art => {
+                            const iconClass = art.icon ? `fa-${art.icon}` : 'fa-tag';
+                            return `<span class="artifact-pill"><i class="fa-solid ${iconClass}" style="color: var(--accent-orange); font-size: 10px;"></i>${art.label}</span>`;
+                        }).join('');
+                    } else {
+                        artifactsEl.innerHTML = `<span class="artifact-pill" style="color:#777;">None</span>`;
+                    }
+                }
+
+                // 9. Permalink
+                const permalinkEl = document.getElementById('mcard-permalink-text');
+                if (permalinkEl && meeting.date) {
+                    permalinkEl.textContent = `twib.bitcoindatalabs.org/meetings.html?date=${meeting.date}`;
+                }
+
+                // Signal ready
+                document.body.setAttribute('data-loaded', 'true');
+            })
+            .catch(err => {
+                console.error("Hydration error:", err);
+                document.body.setAttribute('data-loaded', 'true');
+            });
     </script>
 </body>
 </html>

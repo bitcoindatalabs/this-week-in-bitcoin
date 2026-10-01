@@ -1,0 +1,3439 @@
+[
+  {
+    "date": "2026-10-01",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-10-01_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "abubakarsadiq",
+      "brunoerg",
+      "willcl-ark",
+      "johnny9dev",
+      "eugenesiegel"
+    ],
+    "topics_discussed": [
+      "Fuzzing WG Update: eugenesiegel and marcofleon reported no updates this week. eugenesiegel later proposed a bot to automatically trigger Fuzzamoto builds on PRs, particularly for p2p-related code, to assist contributors.",
+      "Kernel WG Update: No update was provided as sedited was not present.",
+      "Benchmarking WG Update: l0rinc had no update but plans to present next week. andrewtoth requested to be removed as a lead, stating he will continue to review speedup PRs and benchmark but lacks regular updates. The WG may be archived if l0rinc also has no further updates.",
+      "QML GUI WG Update: johnny9dev reported that pseudoramdom completed a comprehensive UX overhaul, with the design nearing release readiness. Feedback is being sought, and the work is available in the `qt6` branch. Pre-built binaries are expected on bitcoincore.app by the end of the day.",
+      "QA WG Update: brunoerg introduced mutanthub.space, a new collaborative mutation testing platform designed to centralize efforts, replacing bitcoincore.space and secp256k1.space. The platform allows users to submit mutants (with admin approval), claim commits/PRs that kill them, and discuss. Killed mutants are defined as those detected by existing tests at the mutant's creation commit point.",
+      "Bitcoin Core 32.0 Milestone: dzxzg requested community assistance for remaining items on milestone #84.",
+      "Automated AI Reviews on PRs: willcl-ark proposed a limited trial of automated AI reviews on PRs, suggesting it could start with contributions from outside the frequent-contributor group or be opt-in. Examples of reviews by 'ralph' are available on git.fish.foo/bitcoin/bitcoin. andrewtoth and abubakarsadiq expressed concern that raw LLM output might be noisy and would benefit from distillation by experienced contributors."
+    ],
+    "decisions_made": [
+      "andrewtoth_ will be removed as a lead for the Benchmarking WG.",
+      "brunoerg will shut down bitcoincore.space and secp256k1.space, centralizing mutation testing efforts on mutanthub.space."
+    ],
+    "action_items": [
+      "QML GUI: Test pre-built binaries on bitcoincore.app and provide UX feedback on qt6 branch.",
+      "QA WG: Submit and claim mutation test commits on the new mutanthub.space platform.",
+      "Core 32.0: Assist with testing and reviewing remaining backport PRs for milestone #84.",
+      "AI Reviews: Review sample automated review outputs on git.fish.foo/bitcoin/bitcoin."
+    ],
+    "mentioned_prs": [
+      84
+    ],
+    "card_topics": [
+      "QML GUI UX Overhaul: pseudoramdom completed comprehensive UX redesign nearing release readiness in qt6 branch; pre-built binaries on bitcoincore.app today.",
+      "QA Infrastructure: brunoerg launched mutanthub.space to centralize collaborative mutation testing, retiring bitcoincore.space & secp256k1.space.",
+      "Automated AI Reviews: willcl-ark proposed opt-in AI review trial (ralph bot on git.fish.foo); andrewtoth and abubakarsadiq raised signal-to-noise concerns.",
+      "Core 32.0 Release: dzxzg requested contributor assistance on remaining PR backports and issues for milestone #84.",
+      "Fuzzing Automation: eugenesiegel proposed an automated bot to trigger on-demand Fuzzamoto builds on PRs, focusing on p2p code.",
+      "Benchmarking WG: andrewtoth stepping down as lead (continuing speedup reviews); l0rinc preparing presentation for next week."
+    ],
+    "narrative_summary": "The Bitcoin Core development team convened, with a significant call for community engagement on the 32.0 milestone. Developers are urged to contribute to outstanding items on milestone #84 to help progress towards the next release. This collaborative effort is crucial for maintaining development velocity and ensuring robust releases.\n\nKey progress was reported across several Working Groups. The QML GUI WG announced a comprehensive UX overhaul by pseudoramdom, nearing release readiness, with pre-built binaries available today. The QA WG introduced mutanthub.space, a new platform by brunoerg designed to centralize and enhance collaborative mutation testing, replacing previous dedicated sites. Additionally, eugenesiegel proposed a bot to automate Fuzzamoto builds on PRs, streamlining testing workflows.\n\nIn terms of decisions and actions, andrewtoth stepped down as a Benchmarking WG lead, though he will continue to contribute to speedup reviews. The QA WG's transition to mutanthub.space represents a strategic consolidation of testing infrastructure. Discussions also initiated around a limited trial of automated AI reviews on PRs, with calls for feedback on this potential new tool and continued review of its output by experienced contributors.",
+    "x_priority_takeaway": "Help needed on Bitcoin Core 32.0 milestone items (#84).",
+    "x_bullet_points": [
+      "QML GUI UX overhaul nearing release.",
+      "New mutanthub.space for mutation testing.",
+      "Fuzzamoto bot for PR builds proposed."
+    ],
+    "linkedin_context": "The Bitcoin Core development team convened, with a significant call for community engagement on the 32.0 milestone. Developers are urged to contribute to outstanding items on milestone #84 to help progress towards the next release. This collaborative effort is crucial for maintaining development velocity and ensuring robust releases.\n\nKey progress was reported across several Working Groups. The QML GUI WG announced a comprehensive UX overhaul by pseudoramdom, nearing release readiness, with pre-built binaries available today. The QA WG introduced mutanthub.space, a new platform by brunoerg designed to centralize and enhance collaborative mutation testing, replacing previous dedicated sites. Additionally, eugenesiegel proposed a bot to automate Fuzzamoto builds on PRs, streamlining testing workflows.\n\nIn terms of decisions and actions, andrewtoth stepped down as a Benchmarking WG lead, though he will continue to contribute to speedup reviews. The QA WG's transition to mutanthub.space represents a strategic consolidation of testing infrastructure. Discussions also initiated around a limited trial of automated AI reviews on PRs, with calls for feedback on this potential new tool and continued review of its output by experienced contributors.",
+    "_text_hash": "75f6d6af85eefd8294088db02d7a95e5",
+    "active_participants": [
+      "abubakarsadiq",
+      "brunoerg",
+      "willcl-ark",
+      "johnny9dev",
+      "eugenesiegel",
+      "dzxzg",
+      "andrewtoth_",
+      "instagibbs",
+      "stickies-v",
+      "yancy",
+      "l0rinc",
+      "marcofleon",
+      "cfields",
+      "hebasto",
+      "lightlike",
+      "pseudoramdom",
+      "maxedw",
+      "b10c",
+      "enochazariah",
+      "nervana21",
+      "theStack",
+      "janb84",
+      "yuvicc",
+      "sipa"
+    ],
+    "referenced_artifacts": [
+      {
+        "label": "Milestone #84",
+        "icon": "flag"
+      },
+      {
+        "label": "Branch: qt6",
+        "icon": "code-branch"
+      },
+      {
+        "label": "mutanthub.space",
+        "icon": "globe"
+      },
+      {
+        "label": "Fuzzamoto Bot",
+        "icon": "robot"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-09-24_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "fjahr",
+      "dergoegge",
+      "sedited",
+      "cfields",
+      "johnny9dev"
+    ],
+    "topics_discussed": [
+      "Fuzzing Working Group: dergoegge announced his departure from full-time contribution, with his projects and security contact responsibilities transitioning to Brink's Marco (marcofleon) and Eugene (eugenesiegel). dergoegge will open PRs to update security contacts.",
+      "QML GUI Working Group: johnny9dev reported ongoing work on design, issue resolution, and staging, with no significant updates this week.",
+      "32.0 Release Candidate Testing: sedited announced the availability of 32.0rc2 binaries for community testing. The umbrella issue #36315 provides links to the proposed release notes and testing guide. Additional pull requests are being backported for milestone 84."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Community members are requested to test the 32.0rc2 binaries, using issue #36315 for tracking feedback and referring to the linked release notes and testing guide.",
+      "dergoegge will open PRs to remove himself as a security contact by the end of the week."
+    ],
+    "mentioned_prs": [
+      36315,
+      84
+    ],
+    "x_priority_takeaway": "32.0rc2 binaries are ready for community testing (#36315).",
+    "x_bullet_points": [
+      "Fuzzing WG leadership transition.",
+      "QML GUI WG: design, issues, staging.",
+      "Milestone 84 backports ongoing."
+    ],
+    "linkedin_context": "Bitcoin Core 32.0rc2 binaries are available; community testing is requested via issue #36315.\n\nFuzzing WG leadership transitions from dergoegge to Brink's Marco and Eugene.",
+    "_text_hash": "8a0c486df1c29221e8345c066e1ab191"
+  },
+  {
+    "date": "2026-09-17",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-09-17_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "fjahr",
+      "johnny9dev",
+      "brunoerg",
+      "andrewtoth_",
+      "sipa"
+    ],
+    "topics_discussed": [
+      "QA Working Group Update: brunoerg reported no update this week, with a significant update planned for next week.",
+      "QML GUI Working Group Update: johnny9dev opened issue #36289 to track the QML staging branch, outlining its use for planning the `gui-qml` merge and prioritizing remaining issues. A new contributor, Andrea, fixed a high-priority issue.",
+      "Benchmarking Working Group Update: andrewtoth reported no update this week.",
+      "Release Testing & Review: fjahr highlighted remaining items for review in milestone 84 and suggested considering PR #36284 (wallet: don't double discard output groups with avoidpartialspends by fjahr) for inclusion in v32."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Review remaining items in milestone 84 for release testing.",
+      "Consider PR #36284 for inclusion in v32.",
+      "johnny9dev to use issue #36289 to outline the `gui-qml` merge plan and prioritize related issues."
+    ],
+    "mentioned_prs": [
+      36289,
+      36284
+    ],
+    "x_priority_takeaway": "Review milestone 84 items; consider #36284 for v32.",
+    "x_bullet_points": [
+      "QML GUI: #36289 tracks merge plan.",
+      "New QML contributor fixed high-prio bug."
+    ],
+    "linkedin_context": "Release testing for milestone 84 continues, with PR #36284 suggested for v32 inclusion.\n\nThe QML GUI WG opened #36289 to track the `gui-qml` merge plan and welcomed a new contributor.",
+    "_text_hash": "320919a11a602daaea4c1121ff39fb36"
+  },
+  {
+    "date": "2026-09-10",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-09-10_16_00.log.json",
+    "participant_count": 28,
+    "key_participants": [
+      "instagibbs",
+      "fjahr",
+      "darosior",
+      "andrewtoth",
+      "sedited"
+    ],
+    "topics_discussed": [
+      "QML GUI Working Group progress, including initial merges and future development plans.",
+      "Kernel Working Group update and a call for comments/reviews on PR #34374.",
+      "Status of the upcoming 32.x release branch-off, noting a few remaining items in the milestone.",
+      "Extensive discussion on the 'private broadcast' feature's privacy guarantees, potential leaks, and managing user expectations for the 32.x release.",
+      "Debate on whether to rename 'private broadcast' or clarify its limitations through documentation to address user expectations."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "johnny9dev to create a tracking issue 'Upgrading Gui to Qml' with the list of development chunks.",
+      "Pseudoramdom to continue updating QML designs to be more desktop-friendly and consistent.",
+      "Epicleafies to continue addressing QML transaction and activity issues.",
+      "Reviewers are encouraged to provide comments on PR #34374.",
+      "The security team is to facilitate a broader discussion about the threat model for the private broadcast feature."
+    ],
+    "mentioned_prs": [
+      34374
+    ],
+    "_text_hash": "918810e4cb275741adb8ff57eefb584f"
+  },
+  {
+    "date": "2026-09-03",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-09-03_16_00.log.json",
+    "participant_count": 21,
+    "key_participants": [
+      "fjahr",
+      "l0rinc",
+      "sedited",
+      "brunoerg",
+      "pinheadmz"
+    ],
+    "topics_discussed": [
+      "QA Working Group Update (brunoerg): `brunoerg` reported Silent Payments mutation analysis achieved 100% score on master, with a full analysis planned. `src/script/interpreter.cpp` mutation analysis yielded 80 survivors from over 1000 mutants, with PRs expected to improve coverage. `Naiyoma` is assisting with parallelizing analysis. `brunoerg` requested feedback on `bitcoinfuzz/bitcoinfuzz/pull/647` for differential fuzzing between the kernel and Core internals.",
+      "QML GUI Working Group Update (johnny9dev): `johnny9dev` stated continued work on the staging branch and issue resolution.",
+      "Benchmarking Working Group Update (l0rinc, andrewtoth): `l0rinc` noted several quadratic iteration fixes merged and requested review for `#36096` (rpc: avoid quadratic JSON construction). `#36000` (validation: prefetch blocks while connecting) was tuned, resulting in reindex-chainstate often >50% faster. `l0rinc` plans to experiment with parallel undo/block flushes for IBD and profile neutered validation-less/UTXO-less nodes to identify remaining bottlenecks.",
+      "Kernel Working Group Update (sedited): `sedited` reported good review for `#35641` (kernel: Add script evaluation tracer) and external project interest. `sedited` will address requests related to `brunoerg`'s linked differential fuzzing PR.",
+      "Release Discussion: `sedited` highlighted remaining items in milestone `84` that require review before branch-off. `pinheadmz` is triaging agent findings in the new HTTP code ahead of the branch-off."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Provide feedback on `bitcoinfuzz/bitcoinfuzz/pull/647` for differential fuzzing between the kernel and Core internals.",
+      "Review `#36096` (rpc: avoid quadratic JSON construction).",
+      "Review remaining items in milestone `84` before branch-off.",
+      "Continue triaging agent findings in the new HTTP code before branch-off."
+    ],
+    "mentioned_prs": [
+      647,
+      36096,
+      36000,
+      35641,
+      84
+    ],
+    "x_priority_takeaway": "Review milestone 84 items and new HTTP findings before branch-off.",
+    "x_bullet_points": [
+      "Silent Payments code: 100% mutation score",
+      "Reindex-chainstate >50% faster with #36000",
+      "Kernel script tracer #35641 gaining interest"
+    ],
+    "linkedin_context": "Review milestone 84 items and new HTTP agent findings for the upcoming branch-off.\n\nSilent Payments code achieved 100% mutation score; #36000 improved reindex-chainstate speed.",
+    "_text_hash": "6c6c73865aff38008e86b56f69d876e1"
+  },
+  {
+    "date": "2026-08-27",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-27_16_00.log.json",
+    "participant_count": 33,
+    "key_participants": [
+      "Moneyball",
+      "andrewtoth",
+      "johnny9dev",
+      "l0rinc",
+      "stickies-v"
+    ],
+    "topics_discussed": [
+      "Fuzzing WG Update: dergoegge noted no update but highlighted PR #36098.",
+      "Kernel WG Update: sedited reported no updates.",
+      "Benchmarking WG Update: l0rinc focused on identifying quadratic algorithms, citing findings from #35889, and is rebasing/reviewing similar issues. andrewtoth had no updates.",
+      "QML GUI WG Update: johnny9dev reported new contributor uqlidi fixing bugs, pseudoramdom improving design, and epicleafies addressing Activity page feedback. johnny9dev updated the initial staging branch PR (bitcoin-core/gui-qml#871) and plans to integrate a QtTest-based integration suite for functional regression tests. hebasto requested review for qml#871. Murch suggested a future testing party.",
+      "Bitcoin Core and AI usage, perception and reality: Moneyball initiated discussion on donor concerns about Core's AI preparedness and leveraging AI tools for triage, code review, and test case development. Individual developers (stickies-v, pinheadmz, achow101, eugenesiegel, Murch, andrewtoth, lightlike, jonatack, l0rinc, maxedw, BlueMatt, Rob1Ham) shared diverse views on AI use, from heavy personal assistance to concerns about 'slop' contributions. Project Loupe and red team efforts were mentioned, with l0rinc receiving an OpenSats mini-grant for systematic scanning. A debate occurred regarding the utility and desirability of automated AI review bots versus human-driven AI assistance. Moneyball will follow up to gather specific information for public communication to address external perceptions."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "hebasto requested more eyes on bitcoin-core/gui-qml#871.",
+      "johnny9dev requested feedback and opinions on the QML GUI staging PR (bitcoin-core/gui-qml#871).",
+      "Moneyball will summarize the AI discussion, formulate detailed questions, and share them with Core developers for potential public communication."
+    ],
+    "mentioned_prs": [
+      36098,
+      35889,
+      871,
+      36055
+    ],
+    "x_priority_takeaway": "QML GUI staging PR #871 needs review for integration.",
+    "x_bullet_points": [
+      "Benchmarking: Quadratic algo hunt.",
+      "AI use: Individual dev workflows.",
+      "Fuzzing: PR #36098 highlighted."
+    ],
+    "linkedin_context": "QML GUI staging branch PR #871 is ready for feedback, integrating QtTest for functional regression.\n\nIndividual developers use AI for review and security; project plans public communication on usage.",
+    "_text_hash": "8b5f8bb239ad1f058c24cf2666e3f034"
+  },
+  {
+    "date": "2026-08-20",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-20_16_00.log.json",
+    "participant_count": 19,
+    "key_participants": [
+      "stickies-v",
+      "l0rinc",
+      "sipa",
+      "cfields",
+      "johnny9dev"
+    ],
+    "topics_discussed": [
+      "Fuzzing and QA Working Group updates (no updates reported).",
+      "Benchmarking Working Group progress, including RPC, txindex, and validation performance improvements, with several PRs merged or in progress.",
+      "QML GUI Working Group's plan to reconstruct the project with clean history for upstreaming, focusing on core components.",
+      "Discussion regarding a potential feature-freeze exception for a vectorized ChaCha20 optimization.",
+      "Debate on the meaning and criteria for using `Co-authored-by` in commits, covering aspects like credit, copyright, and contribution type."
+    ],
+    "decisions_made": [
+      "The vectorized ChaCha20 optimization will not be included in v32, aiming for v33 instead.",
+      "Confirmed that 2026-08-20 is the feature freeze date for v32."
+    ],
+    "action_items": [
+      "cfields to continue working on the vectorized ChaCha20 implementation for potential inclusion in v33.",
+      "johnny9dev to continue working on the `gui-qml` staging PRs, ensuring co-authors are added for significant contributions and can speak to the functionality."
+    ],
+    "mentioned_prs": [
+      35889,
+      36032,
+      35531,
+      36002,
+      36000,
+      34083,
+      35794,
+      35752,
+      35920
+    ],
+    "_text_hash": "a5de252600f458abd1cb24440ecb18cc"
+  },
+  {
+    "date": "2026-08-13",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-13_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "fjahr",
+      "hebasto",
+      "fanquake",
+      "cfields",
+      "sipa"
+    ],
+    "topics_discussed": [
+      "Fuzzing working group updates, including QML GUI fuzzing and incremental snapshots for `fuzzamoto`.",
+      "Benchmarking working group progress on `txindex` optimization and block prefetching.",
+      "QML GUI working group's revised development strategy for staged integration into Bitcoin Core.",
+      "Discussion on dropping MSVC compiler support for Windows builds due to maintenance burden and lack of benefits.",
+      "Kartograf v0.5.0 release, addressing reproducibility issues and its impact on `asmap-data`."
+    ],
+    "decisions_made": [
+      "The QML GUI working group decided to change its development strategy to build the application in stages, introducing testing frameworks from the start, to ensure cleaner history and easier review.",
+      "There was a consensus to drop MSVC compiler support for Bitcoin Core builds, though the exact scope of removal needs further definition."
+    ],
+    "action_items": [
+      "`bitcoindev1337` to decide whether to push a PR for block prefetching or be added as a co-author to an existing one.",
+      "`johnny9dev` to create an issue in `bitcoin/bitcoin` outlining the QML GUI development plan and tracking steps for the first PR chunk.",
+      "`hebasto` to open an issue with a concrete proposal for dropping MSVC support, detailing the extent of the removal.",
+      "Add a note to the `asmap-data` repository (PR #67) to inform users about Kartograf v0.5.0 breaking reproducible results."
+    ],
+    "mentioned_prs": [
+      35531,
+      31507,
+      24773,
+      67
+    ],
+    "_text_hash": "32539d7743857fa3d9424ccacfe7d525"
+  },
+  {
+    "date": "2026-08-06",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-08-06_16_00.log.json",
+    "participant_count": 22,
+    "key_participants": [
+      "fjahr",
+      "johnny9dev",
+      "sedited",
+      "fanquake",
+      "dergoegge"
+    ],
+    "topics_discussed": [
+      "Fuzzing WG update: Antithesis test repository published, seeking contributions for testing areas like assumeutxo.",
+      "Kernel WG update: Progress on block validation function (#35187) and discussion on factoring out a stateless validation library.",
+      "QML GUI WG update: Identifying features for upstream merge (Beta tag), working on staging branch, and performance fixes in the preview build.",
+      "Static builds: #25573 (static-pie bitcoind) is ready for testing after switching to glibc 2.44 and fixing reproducibility issues.",
+      "Upcoming feature freeze in two weeks, with a call for reviews on several PRs and an update on the 32.0 release schedule."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Contribute to the antithesis test repo and join the bitcoin-core-fuzzing channel for discussion.",
+      "Test #25573 (static-pie bitcoind) in various environments and setups.",
+      "Rebase #35642 (headersync: do parameter search at runtime).",
+      "Review #35351 (net: Disallow invalid HeadersSyncState due to lagging clock).",
+      "Review #35699 ([31.x] More Backports).",
+      "Contribute hashpower to the testnet5 ckpool being set up by darosior at Chaincode."
+    ],
+    "mentioned_prs": [
+      35187,
+      35531,
+      25573,
+      35642,
+      35351,
+      35699
+    ],
+    "_text_hash": "7058c82eac3b2dc8947a0194154a0ac1"
+  },
+  {
+    "date": "2026-07-30",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-30_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "fjahr",
+      "darosior",
+      "andrewtoth_",
+      "sliv3r__",
+      "brunoerg"
+    ],
+    "topics_discussed": [
+      "QA Working Group update on mutant analysis parallelization.",
+      "Benchmarking Working Group update.",
+      "Discussion on Testnet5 progress, its dependency on BIP 54, and release strategy."
+    ],
+    "decisions_made": [
+      "The Testnet5 implementation will be based on the BIP 54 implementation.",
+      "Testnet5 will be launched for community use via a separate branch/fork and a published genesis block, independent of its inclusion in an official Bitcoin Core release (v33).",
+      "A draft PR for Testnet5 (initially without the genesis block) will be opened soon, detailing the community launch plan."
+    ],
+    "action_items": [
+      "brunoerg to share more information on parallelization of mutants analysis next week.",
+      "fjahr to open a draft PR for Testnet5 (without the genesis block) by the end of the week and describe the community launch plan within it.",
+      "darosior and _aj_ to coordinate on setting up a solo-mining ckpool for Testnet5.",
+      "sliv3r__ to publish the Testnet5 endpoint in the PR description when the genesis block is available."
+    ],
+    "mentioned_prs": [],
+    "_text_hash": "a2cf69168e71d20bcd671e1f6b775719"
+  },
+  {
+    "date": "2026-07-23",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-23_16_00.log.json",
+    "participant_count": 19,
+    "key_participants": [
+      "stickies-v",
+      "l0rinc",
+      "johnny9dev",
+      "dergoegge",
+      "brunoerg"
+    ],
+    "topics_discussed": [
+      "Fuzzing, Kernel, and QA Working Groups reported no significant updates this week.",
+      "The Benchmarking WG announced a 5% validation speedup from a recently merged PR (#35215) and is running reindex-chainstate benchmarks.",
+      "The QML GUI WG released a preview version, addressed glibc compatibility by building against an older toolchain, and is optimizing rendering performance.",
+      "The QML GUI WG also reported the removal of gMock from their codebase."
+    ],
+    "decisions_made": [],
+    "action_items": [],
+    "mentioned_prs": [
+      35215,
+      35531
+    ],
+    "_text_hash": "dae7f190894cfccbf5c5e487108c6a41"
+  },
+  {
+    "date": "2026-07-16",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-16_16_00.log.json",
+    "participant_count": 12,
+    "key_participants": [
+      "stickies-v",
+      "johnny9dev",
+      "l0rinc",
+      "andrewtoth",
+      "eugenesiegel"
+    ],
+    "topics_discussed": [
+      "Benchmarking Working Group update, including thanks for PR #35295 and a mention of PR #35215's reindex speedup.",
+      "QML GUI Working Group update, with new preview builds available and a plan for wider feedback collection.",
+      "QA Working Group update (brief mention of an external update)."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "johnny9dev to share QML GUI preview builds more widely to gather feedback and identify bugs.",
+      "stickies-v to test the QML GUI preview builds."
+    ],
+    "mentioned_prs": [
+      35295,
+      35215
+    ],
+    "_text_hash": "d5c9146a065bb82e787e787688a1f4ad"
+  },
+  {
+    "date": "2026-07-09",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-09_16_00.log.json",
+    "participant_count": 18,
+    "key_participants": [
+      "stickies-v",
+      "johnny9dev",
+      "l0rinc",
+      "marcofleon",
+      "lightlike"
+    ],
+    "topics_discussed": [
+      "Fuzzing Working Group Update",
+      "Benchmarking Working Group Update",
+      "QML GUI Working Group Update"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Merge the final PR for updating the QML GUI submodule and build.",
+      "Publish the first QML GUI preview builds today or tomorrow.",
+      "Update the bitcoincore.app website next week with QML GUI build links and testing information."
+    ],
+    "mentioned_prs": [
+      35295
+    ],
+    "_text_hash": "e2f230140f7eaf9bf8b8ba6ec56ad94f"
+  },
+  {
+    "date": "2026-07-02",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-07-02_16_00.log.json",
+    "participant_count": 22,
+    "key_participants": [
+      "stickies-v",
+      "marcofleon",
+      "sedited",
+      "brunoerg",
+      "l0rinc"
+    ],
+    "topics_discussed": [
+      "Fuzzing Working Group updates, including new harnesses for LevelDB/CDBWrapper, progress on IPC fuzzing, and Bedrock hypervisor developments that found a bug in the new HTTP server.",
+      "Kernel Working Group updates, covering review progress on BlockTreeDB replacement, ongoing discussion on CTransaction encapsulation, and the introduction of a script execution tracer.",
+      "Benchmarking Working Group updates, highlighting disk usage optimizations for the txospenderindex and suggesting similar application to the new txindex format.",
+      "QA Working Group updates, introducing a new setup for mutation testing that uses an LLM to generate human-readable reports for PRs, with initial feedback on verbosity.",
+      "A new CI job for Riscv bare metal target was introduced, tracking script verification compilation to prevent portability regressions and serving as a step towards a Riscv consensus library."
+    ],
+    "decisions_made": [
+      "The Silent Payments Working Group was moved to the archive due to a lack of recent updates, with an open invitation for anyone to pick it up again.",
+      "The QA Working Group intends to make LLM-generated mutation testing reports shorter by focusing on areas for improvement rather than listing what current tests do well, and plans to hyperlink the reports."
+    ],
+    "action_items": [
+      "Marcoleon will likely focus on fuzzing PRs #34651 and #34895 next.",
+      "Marcoleon will provide semi-regular updates for the Fuzzing Working Group.",
+      "Reviewers are encouraged to continue commenting on Kernel WG PR #35569.",
+      "Brunoerg intends to hyperlink the LLM-generated mutation testing reports and focus on what could/should be improved."
+    ],
+    "mentioned_prs": [
+      34866,
+      34887,
+      35295,
+      31132,
+      35118,
+      34651,
+      34895,
+      32427,
+      35569,
+      35641,
+      35634,
+      35531,
+      35591,
+      31425
+    ],
+    "_text_hash": "d3c4ebd94c1f1dc4c198b8ad29ab7215"
+  },
+  {
+    "date": "2026-06-25",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-06-25_16_00.log.json",
+    "participant_count": 28,
+    "key_participants": [
+      "stickies-v",
+      "l0rinc",
+      "nickler",
+      "brunoerg",
+      "andrewtoth"
+    ],
+    "topics_discussed": [
+      "Benchmarking Working Group updates on PRs related to validation, txindex, and chainstate compaction.",
+      "Secp256k1 maintainer transition, with a proposal for a new maintainer.",
+      "Formation of a new Quality Assurance Working Group.",
+      "Update on the ASMap dashboard and upcoming data run."
+    ],
+    "decisions_made": [
+      "The proposal for 'theStack' to become the new libsecp256k1 maintainer was accepted, with 'nickler' stepping down.",
+      "A Quality Assurance Working Group (QA WG) has been formally created.",
+      "brunoerg will be added to the WG rotation for weekly updates on the QA WG."
+    ],
+    "action_items": [
+      "Review PRs #35295, #35531, and #35215.",
+      "Provide feedback on the ASMap dashboard via the Delving Bitcoin post.",
+      "Join the new Quality Assurance Working Group via the provided Signal link."
+    ],
+    "mentioned_prs": [
+      35295,
+      35531,
+      35465,
+      35594,
+      35215
+    ],
+    "_text_hash": "ffca84acf3db20cad648cd6c6ca76dca"
+  },
+  {
+    "date": "2026-06-18",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-06-18_16_00.log.json",
+    "participant_count": 26,
+    "key_participants": [
+      "sipa",
+      "johnny9dev",
+      "stickies-v",
+      "andrewtoth",
+      "sedited"
+    ],
+    "topics_discussed": [
+      "Fuzzing Working Group Update: Next update scheduled for the following week.",
+      "Kernel Working Group Update: Highlighted pupleKarrot's blog on serialization refactoring and library direction.",
+      "Benchmarking Working Group Update: Discussed secp256k1 speedups, progress on chainstate compaction PRs, parallel prevout fetching, and observations on LevelDB seek compaction.",
+      "QML GUI Working Group Update: Four PRs in review, plans for signed preview builds for UX feedback, and strategy for constructing the main staging branch.",
+      "LevelDB Block Cache: Discovery that the LevelDB block cache is largely unused in typical Bitcoin Core builds, prompting a re-evaluation of memory allocation strategies."
+    ],
+    "decisions_made": [
+      "Johnny9dev decided to sign the QML GUI preview builds themselves, with clear warnings about their purpose for feedback."
+    ],
+    "action_items": [
+      "Fuzzing WG to provide an update next week.",
+      "Review and provide feedback on PR #35215 (coins: use jumboblock SipHash-1-3 for hashing CCoinsMap keys).",
+      "Continue benchmarking for PR #35465 (coins: compact chainstate regularly) to assess backporting suitability.",
+      "Review and provide feedback on PR #35295 (validation: fetch block input prevouts in parallel during ConnectBlock).",
+      "Sipa to perform minimal testing and provide guidance to l0rinc for benchmarking LevelDB table cache regimes.",
+      "QML GUI WG to share more details and Python scripts for reproducing the staging branch next week.",
+      "QML GUI WG to release preview builds soon to gather UX feedback.",
+      "BIP authors with Draft BIPs are encouraged to open PRs to advance their status (Complete/Closed).",
+      "Further discussion on LevelDB memory usage and distribution on relevant PRs."
+    ],
+    "mentioned_prs": [
+      1859,
+      1765,
+      35215,
+      35531,
+      35465,
+      35331,
+      35295,
+      63,
+      34636
+    ],
+    "_text_hash": "d475b65e5f8bb18fade26fcdb7246d4e"
+  },
+  {
+    "date": "2026-06-11",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-06-11_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "stickies-v",
+      "andrewtoth",
+      "Murch[m]",
+      "sedited",
+      "instagibbs"
+    ],
+    "topics_discussed": [
+      "Benchmarking Working Group updates, including progress on chainstate compaction and parallel prevout fetching.",
+      "Strategy for publicly communicating a known vulnerability and workarounds before a release.",
+      "Status and blockers for the upcoming 31.1 release.",
+      "Discussion on contributor conduct and project policy regarding uncharitable public behavior."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Review PR #35295 (validation: fetch block input prevouts in parallel during ConnectBlock).",
+      "Review PR #35465 (coins: compact chainstate regularly after post-IBD flushes) to unblock the 31.1 release.",
+      "More contributors to concept ack blog posts.",
+      "stickies-v to review meta issue #46 regarding contributor conduct."
+    ],
+    "mentioned_prs": [
+      35465,
+      35295,
+      1255,
+      35331
+    ],
+    "_text_hash": "1d731b679b30fbbbaf03f7cc40d39b34"
+  },
+  {
+    "date": "2026-06-04",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-06-04_16_00.log.json",
+    "participant_count": 28,
+    "key_participants": [
+      "stickies-v",
+      "l0rinc_",
+      "sedited",
+      "johnny9dev",
+      "fjahr"
+    ],
+    "topics_discussed": [
+      "Working Group Updates (Fuzzing, Kernel, Benchmarking, QML GUI, Libevent removal)",
+      "Call for review on Kernel PR #32427 and Libevent removal PR #35182",
+      "Benchmarking updates, including secp256k1 optimizations and LevelDB subtree merge",
+      "Discussion and feedback on chainstate compaction PR #35465"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "More developers are encouraged to review PR #32427 (Kernel WG).",
+      "Reproducers and Windows/MSVC experts are welcome to review secp256k1 PR #1859.",
+      "Review of PR #35182 (Libevent removal) is encouraged to get it merged early in the release cycle.",
+      "l0rinc_ will refine the compaction trigger for PR #35465 to address concerns about `assumevalid=0` users."
+    ],
+    "mentioned_prs": [
+      32427,
+      1859,
+      61,
+      35465,
+      35182
+    ],
+    "_text_hash": "bad9ff911b638fbefadf615f8adc3a3e"
+  },
+  {
+    "date": "2026-05-28",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-05-28_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "andrewtoth_",
+      "stickies-v",
+      "sedited",
+      "Murch[m]",
+      "darosior"
+    ],
+    "topics_discussed": [
+      "Kernel WG updates, including BlockTreeDB replacement and mempool/policy code separation.",
+      "Benchmarking WG update, focusing on automated chainstate compaction strategies (post-IBD vs. periodic).",
+      "Progress on Libevent removal, with one component already merged and another close to completion.",
+      "QML GUI WG development for June \"Preview\" builds and v31 compatibility.",
+      "Silent Payments integration and the blocking PR for the 31.x point release."
+    ],
+    "decisions_made": [
+      "Libevent removal from the client was merged."
+    ],
+    "action_items": [
+      "stickies-v to review PR #32427.",
+      "sedited to consider opening an RFC issue or PR for the mempool/policy code split.",
+      "andrewtoth_ to address review comments on PR #35295.",
+      "Review secp256k1/pull/1765, PR #35301, and PR #35302 for Silent Payments.",
+      "Prioritize getting PR #35319 done to unblock the 31.x point release.",
+      "vasild to provide an ETA for his version of the test for PR #35319."
+    ],
+    "mentioned_prs": [
+      32427,
+      35295,
+      35182,
+      35301,
+      35302,
+      35319
+    ],
+    "_text_hash": "e39a40fb85adba71e7f76335078953ba"
+  },
+  {
+    "date": "2026-05-21",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-05-21_16_00.log.json",
+    "participant_count": 31,
+    "key_participants": [
+      "_andrewtoth_",
+      "stickies-v",
+      "Murch[m]",
+      "instagibbs",
+      "eugenesiegel"
+    ],
+    "topics_discussed": [
+      "Benchmarking WG Update: A LevelDB seek compaction bug causing excessive disk writes was discussed, along with a potential fix that increases disk usage by ~11% during IBD. The group explored options for automation and user notification.",
+      "Silent Payments WG Update: Progress was reported on the `libsecp` SP module PR, and new PRs (#35301, #35302) were opened for BIP352 implementation.",
+      "Libevent Removal: Ongoing efforts to replace libevent for HTTP and socket handling (#35182) and in the CLI client (#34342) are addressing edge cases and review comments, with both PRs nearing completion.",
+      "Private Broadcast IP Leak: A critical bug in `-privatebroadcast` (#35319) was identified, potentially leaking user IPs during v2->v1 connection downgrades when using Tor. The group discussed the severity and the need to alert users.",
+      "ASmap and BIP Metadata: Updates on ASmap data PRs and the next collab run were shared, and BIP authors were encouraged to review their BIPs for metadata accuracy."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "_andrewtoth_ to address review comments on #35295 and investigate automating LevelDB compaction after IBD.",
+      "pinheadmz to continue work on #35182, focusing on edge cases and de-globalizing HTTP.",
+      "fjahr to continue addressing review comments on #34342.",
+      "jurraca to seek ACK on `asmap-data/pull/48` and prepare for the next ASmap collab run on June 4th.",
+      "The community to consider communicating the `-privatebroadcast` IP leak issue (#35319) to users via mailing list or website.",
+      "BIP authors are encouraged by Murch to review their BIPs for metadata accuracy (e.g., Informational vs. Specification, Draft status)."
+    ],
+    "mentioned_prs": [
+      35298,
+      61,
+      31132,
+      35295,
+      1765,
+      35301,
+      35302,
+      28122,
+      28201,
+      35182,
+      34342,
+      48,
+      50,
+      35319
+    ],
+    "_text_hash": "7bb71df852f556bb10fbf0dab9cddd40"
+  },
+  {
+    "date": "2026-05-14",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-05-14_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "stickies-v",
+      "pinheadmz",
+      "johnny9dev",
+      "_andrewtoth_",
+      "cfields"
+    ],
+    "topics_discussed": [
+      "Fuzzing Working Group update.",
+      "Net Split Working Group update.",
+      "Benchmarking Working Group update, including progress on parallel block input fetching.",
+      "QML GUI Working Group update, including project board setup and release plan.",
+      "Libevent removal progress and handling of the `debugexclude=libevent` option."
+    ],
+    "decisions_made": [
+      "cfields will be removed from the Net Split WG update rotation.",
+      "The `libevent` logging category will be retained after its removal, but without messages, and a deprecation warning will be issued on startup if specified."
+    ],
+    "action_items": [
+      "cfields to inform stickies-v or update the wiki when ready to be re-added to the Net Split WG update rotation.",
+      "_andrewtoth_ to create a fresh PR for the changes related to parallel block input fetching (#31132).",
+      "jarolrod will formally contribute to the QML GUI project.",
+      "pinheadmz to implement the change to retain the `libevent` logging category with a deprecation warning.",
+      "fjahr needs to address the latest feedback on their CLI pull request."
+    ],
+    "mentioned_prs": [
+      35156,
+      31132,
+      35182
+    ],
+    "_text_hash": "7ee364f9758dcdd5d62d26f1662f14f5"
+  },
+  {
+    "date": "2026-04-30",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-04-30_16_00.log.json",
+    "participant_count": 20,
+    "key_participants": [
+      "abubakarsadiq",
+      "johnny9dev",
+      "pinheadmz",
+      "sedited",
+      "dergoegge"
+    ],
+    "topics_discussed": [
+      "Fuzzing and Net Split Working Groups reported no updates, with the Fuzzing WG planning a presentation at the upcoming coredev meeting.",
+      "The Kernel WG is migrating `rust-bitcoinkernel` to hand-rolled bindings to reduce dependencies and is seeking reviews for open PRs.",
+      "The Benchmarking WG is seeking further review for PR #31132, which received initial feedback from l0rinc.",
+      "The QML GUI WG reported significant progress, including new contributor PRs for address lists, hiding change outputs, and RBF support, alongside improvements to the activity page, block clock, PSBT import, and receive features. The WG lead is also preparing planning and documentation for coredev.",
+      "Progress on Libevent removal saw PR #32061 closed after extensive work, including addressing feedback, patching crash bugs, and adding functional tests, with a new PR #35182 opened. Fuzz and integration testing are the next steps."
+    ],
+    "decisions_made": [
+      "The next IRC meeting is canceled due to the upcoming coredev meeting."
+    ],
+    "action_items": [
+      "Kernel WG to continue seeking review for open PRs on their project board.",
+      "Benchmarking WG requests more review for PR #31132.",
+      "QML GUI WG lead (johnny9dev) to consider using a project board for tracking PRs and progress.",
+      "QML GUI WG to continue working on feature parity and preparing planning/documentation for coredev.",
+      "Libevent removal efforts to proceed with fuzz testing and integration testing for PR #35182."
+    ],
+    "mentioned_prs": [
+      31132,
+      561,
+      556,
+      554,
+      559,
+      558,
+      557,
+      553,
+      32061,
+      35182
+    ],
+    "_text_hash": "002e9ca8f7d237849fb682c3d3c3c99d"
+  },
+  {
+    "date": "2026-04-23",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-04-23_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "abubakarsadiq",
+      "l0rinc",
+      "johnny9dev",
+      "cfields",
+      "sipa"
+    ],
+    "topics_discussed": [
+      "Net Split Working Group Update",
+      "Benchmarking Working Group Update",
+      "QML GUI Working Group Update",
+      "Libevent Removal Progress"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "cfields is working on a multi_index replacement.",
+      "l0rinc is preparing a follow-up to PR #35128 to further speed up `gettxoutsetinfo`.",
+      "johnny9dev is working on the PSBT import flow for the QML GUI.",
+      "New contributor pseudoramdom will implement the RBF design for the QML GUI.",
+      "epicleafies is working on Receiving and Sign message features for the QML GUI.",
+      "The 'Address Book' page is identified as the last feature-parity issue needing a first implementation in the QML GUI.",
+      "fjahr is addressing review comments on PR #34342 and waiting for a rebase/re-open to start review on the http server component."
+    ],
+    "mentioned_prs": [
+      35025,
+      35124,
+      34641,
+      35128,
+      551,
+      34342
+    ],
+    "_text_hash": "92f9160d6f33181623d1712ef2edfcaf"
+  },
+  {
+    "date": "2026-04-16",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-04-16_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "abubakarsadiq",
+      "l0rinc",
+      "pinheadmz",
+      "johnny9dev",
+      "janb84"
+    ],
+    "topics_discussed": [
+      "Benchmarking Working Group Update: Discussion on coins cleanup PRs, rebased PRs, and reindex performance metrics.",
+      "QML GUI Working Group Update: Progress on external signer support, wallet functionality, and onboarding fixes, with AI-assisted design.",
+      "Libevent Removal: Targeting v32 for removal and plans for rebasing a key PR.",
+      "Fuzzing and Net Split Working Groups: No updates provided this week."
+    ],
+    "decisions_made": [
+      "Libevent removal is targeted for Bitcoin Core v32."
+    ],
+    "action_items": [
+      "l0rinc to focus on PRs #34887 and #31132 next week.",
+      "johnny9dev to implement backup, password change, and delete features for the QML GUI's \"Wallet Settings\" page.",
+      "pinheadmz to rebase, close, and reopen PR #32061, incorporating comments from hodlinator, vasild, and janb84."
+    ],
+    "mentioned_prs": [
+      34124,
+      35078,
+      34132,
+      34320,
+      34887,
+      31132,
+      547,
+      548,
+      550,
+      549,
+      32061
+    ],
+    "_text_hash": "d83e6f7e5c982cd78848a303b56716b7"
+  },
+  {
+    "date": "2026-04-09",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-04-09_16_00.log.json",
+    "participant_count": 29,
+    "key_participants": [
+      "abubakarsadiq",
+      "corebot`",
+      "l0rinc",
+      "cfields",
+      "pinheadmz"
+    ],
+    "topics_discussed": [
+      "Working Group Updates (Net Split, Fuzzing, QML GUI, Kernel, Benchmarking)",
+      "Progress on Libevent removal efforts",
+      "Discussion on Initial Block Download (IBD) performance and bottlenecks",
+      "Bitcoin Core 31.0 Release Candidate 4 testing and release notes review"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "pinheadmz to rebase #32061 (removing first 7 commits) and address feedback from hodlinator and vasild.",
+      "epicleafies to work on another URI issue and fix up previous PRs.",
+      "cfields to rebase #34083 and address feedback.",
+      "l0rinc to prioritize reviewing #34083 if cfields works on it.",
+      "All participants to test Bitcoin Core 31.0 RC4.",
+      "All participants to review the Bitcoin Core 31.0 release notes draft in the wiki."
+    ],
+    "mentioned_prs": [
+      35040,
+      34158,
+      34342,
+      34905,
+      34772,
+      32061,
+      35000,
+      34208,
+      35025,
+      32554,
+      34124,
+      31132,
+      34083
+    ],
+    "_text_hash": "4f11ea7dac6ef6d4c2d2d0ab1bad104e"
+  },
+  {
+    "date": "2026-04-02",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-04-02_16_00.log.json",
+    "participant_count": 18,
+    "key_participants": [
+      "abubakarsadiq",
+      "johnny9dev",
+      "fjahr",
+      "marcofleon",
+      "theStack"
+    ],
+    "topics_discussed": [
+      "Fuzzing Working Group update, including automated PR fuzzing and new fuzz tests.",
+      "Net Split Working Group update, with upcoming PRs for a LocalAddressManager.",
+      "Silent Payments Working Group update, awaiting review for the secp256k1 module PR and a demonstration of a worst-case scanning attack on signet.",
+      "QML GUI Working Group update, detailing progress on legacy wallet migration, fee selection controls, BIP21 URI support, and nearing feature parity with 6 remaining tasks.",
+      "Libevent removal efforts, with updates on several PRs and initial integration testing with LND."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "pinheadmz to rebase PR #32061 on #34905 and #34772, and incorporate new feedback."
+    ],
+    "mentioned_prs": [
+      1765,
+      34905,
+      34772,
+      32061,
+      34158
+    ],
+    "_text_hash": "c18a9a81f8d34ddf3799dd6720ed78b6"
+  },
+  {
+    "date": "2026-03-26",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-03-26_16_00.log.json",
+    "participant_count": 22,
+    "key_participants": [
+      "sipa",
+      "fjahr",
+      "cfields",
+      "Murch[m]",
+      "johnny9dev"
+    ],
+    "topics_discussed": [
+      "Working Group Updates: Net Split (local address refactor), QML GUI (testing, features), and Libevent removal (HTTP/socket, torcontrol).",
+      "asmap file format & tooling: Proposal to replace the Python encoder/decoder with a C++ `bitcoin-asmap` binary for improved testing.",
+      "asmap file format & tooling: Discussion on a new, more complex format for asmap data to achieve a 20% size reduction."
+    ],
+    "decisions_made": [
+      "sipa will proceed with C++ifying the current asmap file format encoder/decoder."
+    ],
+    "action_items": [
+      "cfields to PR the refactoring of local address handling into LocalAddressManager.",
+      "johnny9dev to review epicleafies' lingering PRs for new QML GUI features.",
+      "pinheadmz to continue fuzzing and integration testing #32061 and push updates for #34772 and #34905.",
+      "fjahr to continue responding to reviews for #34158.",
+      "sipa to start C++ifying the asmap file format encoder/decoder."
+    ],
+    "mentioned_prs": [
+      32061,
+      34772,
+      34905,
+      34158,
+      34636,
+      32606
+    ],
+    "_text_hash": "cfd47dc7a9a3d533f6075419910c5a5c"
+  },
+  {
+    "date": "2026-03-19",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-03-19_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "fjahr",
+      "sedited",
+      "johnny9dev",
+      "eugenesiegel",
+      "pinheadmz"
+    ],
+    "topics_discussed": [
+      "Working Group Updates (Fuzzing, Kernel, QML GUI, Benchmarking)",
+      "Progress and review focus for Libevent removal",
+      "Introduction of `MempoolUpdated` ValidationInterface callback for fee estimation",
+      "Discussion on the location of ASmap attestation scripts",
+      "Debate on compact block processing for `-blocksonly` nodes"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Review comments on #32317 (Kernel WG: UTXO set separation).",
+      "Review #32427 (Kernel WG: flat-file BlockTreeDB) for faster silent payment scanning.",
+      "Clear the accumulating QML GUI PRs.",
+      "Pinheadmz to close #32061 and reopen a fresh PR, and create two new PRs for tests and utility tweaks related to Libevent removal.",
+      "Focus review on #34772 (HTTP server prerequisite) and #34158 (torcontrol libevent removal).",
+      "Provide feedback on #34803 (`MempoolUpdated` ValidationInterface callback).",
+      "Review #34842 (ASmap attestation scripts location).",
+      "Follow up on the discussion in #32606 regarding compact block processing for `-blocksonly` nodes."
+    ],
+    "mentioned_prs": [
+      32317,
+      32427,
+      31194,
+      32061,
+      34772,
+      34158,
+      34803,
+      34842,
+      32606
+    ],
+    "_text_hash": "00a867019a7d50fcf654d7749c487412"
+  },
+  {
+    "date": "2026-03-12",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-03-12_16_00.log.json",
+    "participant_count": 26,
+    "key_participants": [
+      "fjahr",
+      "_aj_",
+      "johnny9dev",
+      "achow101",
+      "fanquake"
+    ],
+    "topics_discussed": [
+      "Working Group Updates (Fuzzing, Benchmarking, QML GUI)",
+      "Discussion on the numerous open PRs and issues related to the logging system API changes",
+      "Update on the v31.0 release process, including branching and RC1 tag",
+      "Addressing intermittent test issues and improving overall test stability"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "johnny9dev to edit the WGs wiki page to reactivate the QML GUI WG.",
+      "dergoegge to review the draft PR for the GUI test automation bridge (bitcoin-core/gui#933).",
+      "Community members to review the open logging system PRs/issues, provide feedback, and help consolidate proposals.",
+      "ryanofsky to review the logging system gist provided by _aj_.",
+      "Community members to review and contribute to the 31.0 Release Notes Draft on the wiki.",
+      "janb84 to address the testing guide as part of the BOSS program.",
+      "maflcko and others to run functional tests in a loop overnight on various platforms (especially Windows for #34367) to identify and report intermittent test issues."
+    ],
+    "mentioned_prs": [
+      34576,
+      31132,
+      933,
+      28318,
+      34038,
+      34062,
+      34367
+    ],
+    "_text_hash": "ea2c42a678b6ccd9bc6673dc8c2cef74"
+  },
+  {
+    "date": "2026-03-05",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-03-05_16_00.log.json",
+    "participant_count": 27,
+    "key_participants": [
+      "fjahr",
+      "johnny9dev",
+      "dergoegge",
+      "hebasto",
+      "achow101"
+    ],
+    "topics_discussed": [
+      "Fuzzing Working Group Update and GUI Fuzzing Proposal",
+      "Benchmarking Working Group Update and v31 UX Improvements",
+      "QML GUI Development Progress and Future Strategy",
+      "Bitcoin Core 31.0 Release Milestone Status"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Provide feedback and ideas for the fuzzor-dashboard.",
+      "Review the 8 open PRs remaining in the 31.0 milestone.",
+      "Research fuzzing for the existing Qt widgets GUI.",
+      "Continue to clarify the overall strategy and resource allocation for GUI development (Qt widgets vs. QML)."
+    ],
+    "mentioned_prs": [
+      503,
+      34692,
+      34641,
+      34735,
+      29914
+    ],
+    "_text_hash": "261da9027a5f49364da0261c204d73e0"
+  },
+  {
+    "date": "2026-02-26",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-02-26_16_00.log.json",
+    "participant_count": 16,
+    "key_participants": [
+      "fjahr",
+      "sipa",
+      "andrewtoth_",
+      "sr_gi",
+      "sedited"
+    ],
+    "topics_discussed": [
+      "Cluster Mempool Working Group dissolution",
+      "Kernel Working Group update, including a new RFC PR for concurrency improvements",
+      "Benchmarking Working Group update, with a merged PR and discussion on a dbcache scaling PR for v31",
+      "Erlay conceptual discussion",
+      "Review of v31 milestone items"
+    ],
+    "decisions_made": [
+      "The Cluster Mempool Working Group was dissolved following the closure of its tracking issue #30289."
+    ],
+    "action_items": [
+      "Review and provide feedback on the Erlay conceptual discussion RFC issue (#34542).",
+      "Review v31 milestone items.",
+      "Address scope creep on PR #34641 (node: scale `-dbcache` default) if it is to be included in v31."
+    ],
+    "mentioned_prs": [
+      30289,
+      34654,
+      34165,
+      31132,
+      34641,
+      34542
+    ],
+    "_text_hash": "a420051609c3c0d6816a93ef166eaf47"
+  },
+  {
+    "date": "2026-02-19",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-02-19_16_00.log.json",
+    "participant_count": 31,
+    "key_participants": [
+      "fjahr",
+      "darosior",
+      "sipa",
+      "l0rinc",
+      "Murch[m]"
+    ],
+    "topics_discussed": [
+      "Working Group Updates (Fuzzing, Benchmarking, Silent Payments, Cluster Mempool)",
+      "v31 Feature Freeze status and open items",
+      "Discussion on bumping the default -dbcache setting based on system RAM",
+      "Release process and attestation for embedded ASMAP data",
+      "The future of the Bitcoin Core GUI, including QML development and feature addition policy"
+    ],
+    "decisions_made": [
+      "Silent Payments will limit the maximum number of SP outputs in a transaction to address worst-case scanning problems (current proposed value is 1000, pending BIP inclusion)."
+    ],
+    "action_items": [
+      "l0rinc to create a PR for dynamically setting the default -dbcache based on available system RAM (e.g., 100/400/1000 MB tiers).",
+      "theStack to open a BIP-352 PR for the proposed K_max=1000 limit for Silent Payments.",
+      "johnny9dev (with hebasto) to provide a writeup explaining the QML GUI architecture, dependencies, and decoupling from the current Qt Widgets GUI.",
+      "fjahr to collect and track comments and ideas regarding the embedded ASMAP release todos in the relevant issue."
+    ],
+    "mentioned_prs": [
+      34138,
+      34280,
+      34165,
+      31132,
+      34023,
+      34616,
+      34601,
+      34606,
+      19873,
+      8437,
+      33333,
+      28792,
+      33684,
+      29914
+    ],
+    "_text_hash": "bfb43185866a838314ed4ff5cd12ce7b"
+  },
+  {
+    "date": "2026-02-12",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-02-12_16_00.log.json",
+    "participant_count": 26,
+    "key_participants": [
+      "achow101",
+      "hebasto",
+      "pinheadmz_",
+      "fanquake",
+      "fjahr"
+    ],
+    "topics_discussed": [
+      "Fuzzing, Cluster Mempool, and Net Split Working Group updates.",
+      "Proposal to deprecate Bitcoin Core GUI binaries in v31.0 and shift focus to public APIs (IPC, RPC).",
+      "Extensive discussion on the future of the GUI, including user base, security concerns with external GUIs, architectural issues (monolithic vs. IPC), and the viability of QML-based alternatives.",
+      "Debate over the necessity of an official GUI and the technical requirements (RPC vs. IPC) for future GUI development."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Review Cluster Mempool PR #34023.",
+      "Individuals interested in maintaining the current GUI or developing a new QML-based GUI are encouraged to step up and take ownership, particularly given hebasto's shift in focus.",
+      "cfields_ to submit patches for Qt dependencies build issue (#34569)."
+    ],
+    "mentioned_prs": [
+      34257,
+      34023,
+      34569
+    ],
+    "_text_hash": "121a4ce2a9b64d8904f1f6620c580f27"
+  },
+  {
+    "date": "2026-02-05",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-02-05_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "fjahr",
+      "marcofleon",
+      "corebot`",
+      "sipa",
+      "andrewtoth"
+    ],
+    "topics_discussed": [
+      "Working Group Updates (Net Split, Cluster Mempool, Benchmarking)",
+      "Review of the v31 feature freeze timeline and milestone",
+      "Discussion on the future of Erlay, its tradeoffs, and prioritization",
+      "Progress on Cluster Mempool PRs, aiming for completion for v31",
+      "Review of various PRs for the upcoming v31 release"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Add PR #34023 to the v31 milestone.",
+      "instagibbs to review Cluster Mempool ordering PR (#34257).",
+      "sipa to review Benchmarking PR #34165.",
+      "Open a new GitHub issue for a comprehensive discussion on Erlay, including conceptual overview, tradeoffs, and recent developments.",
+      "sr_gi[m] to contribute a refresher on Erlay tradeoffs, pending items, and recent simulation results to the new Erlay discussion issue."
+    ],
+    "mentioned_prs": [
+      34257,
+      34023,
+      34138,
+      34165,
+      34329,
+      33512,
+      28463
+    ],
+    "_text_hash": "457dd104343979b2060ed05fe462e450"
+  },
+  {
+    "date": "2026-01-29",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-01-29_16_00.log.json",
+    "participant_count": 23,
+    "key_participants": [
+      "fjahr",
+      "corebot`",
+      "l0rinc",
+      "Novo",
+      "andrewtoth"
+    ],
+    "topics_discussed": [
+      "Working Group updates, covering Net Split, Silent Payments, Benchmarking, Kernel, Fuzzing, and Cluster Mempool.",
+      "Silent Payments research, including ideas for parallelization and performance testing of a LabelSet implementation.",
+      "Benchmarking progress, highlighting new benchmarks via benchcoin and recent merges related to validation and coins cache.",
+      "Kernel development updates, specifically a draft RFC for a new CChain data structure and progress on a logging PR.",
+      "Cluster Mempool work, with a focus on improving the cost model and achieving deterministic transaction ordering."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Novo to explore parallelization techniques for Silent Payments."
+    ],
+    "mentioned_prs": [
+      31132,
+      32407,
+      34253,
+      34424,
+      34374,
+      34138,
+      34257,
+      34054,
+      34207,
+      34280,
+      33018
+    ],
+    "_text_hash": "d4ef4cfdd8734a7c4a7d38761992becf"
+  },
+  {
+    "date": "2026-01-22",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-01-22_16_00.log.json",
+    "participant_count": 19,
+    "key_participants": [
+      "fjahr",
+      "corebot`",
+      "l0rinc",
+      "sedited",
+      "abubakarsadiq"
+    ],
+    "topics_discussed": [
+      "Working Group Updates: Fuzzing, Kernel, Benchmarking, Cluster Mempool, and Net Split.",
+      "Kernel WG discussed a logging PR (#34374) and ongoing work on CChain concurrency.",
+      "Benchmarking WG reported on varops budget measurements, benchmark fixes, and a ~30% speedup for PR #31132.",
+      "Cluster Mempool WG emphasized review for PR #34257 and discussed new related work by abubakarsadiq.",
+      "Silent Payments scanning approaches are actively being discussed on secp256k1."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Review PR #34374 (Kernel WG logging functionality).",
+      "Provide more review on PR #31132 (validation: fetch block inputs on parallel threads).",
+      "Provide conceptual comments and review for PR #34257 (txgraph: deterministic optimal transaction order).",
+      "sipa to review abubakarsadiq's cluster mempool work.",
+      "abubakarsadiq to decide on opening a standalone PR for his cluster mempool work."
+    ],
+    "mentioned_prs": [
+      34374,
+      34280,
+      31132,
+      34257
+    ],
+    "_text_hash": "05e9ab2a991d8587499a4bead63a07cb"
+  },
+  {
+    "date": "2026-01-15",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-01-15_16_00.log.json",
+    "participant_count": 27,
+    "key_participants": [
+      "fjahr",
+      "Novo",
+      "l0rinc",
+      "furszy",
+      "fanquake"
+    ],
+    "topics_discussed": [
+      "Working Group updates: Fuzzing (new infrastructure, bug findings), Silent Payments (scan time improvements, benchmarking), and Cluster Mempool (recent PR merges and next review).",
+      "Addressing persistent CI build failures on forked repositories caused by the `Valgrind fuzz` job.",
+      "Net Split WG update, including a chacha20 performance fix and discussion on generic vectorized code."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Investigate implementing a `RUN_SLOW_CHECKS` variable to manage slow CI jobs on forked repositories."
+    ],
+    "mentioned_prs": [
+      34304,
+      33461,
+      34259,
+      34257
+    ],
+    "_text_hash": "4f49b34f63bc76888537c484e4e4c591"
+  },
+  {
+    "date": "2026-01-08",
+    "url": "https://achow101.com/ircmeetings/2026/bitcoin-core-dev.2026-01-08_16_00.log.json",
+    "participant_count": 35,
+    "key_participants": [
+      "fjahr",
+      "l0rinc",
+      "sipa",
+      "abubakarsadiq",
+      "glozow"
+    ],
+    "topics_discussed": [
+      "Kernel and Benchmarking Working Group updates, covering copy-on-write datastructures, coins cache refactoring, and performance improvements for IBD.",
+      "Cluster Mempool Working Group update, including an optimized SFL linearization PR and discussion on transaction ordering for privacy.",
+      "The nomination of TheCharlatan (sedited) as a new Bitcoin Core maintainer, receiving widespread support.",
+      "Updates on incremental mutation testing, a new mempool-based fee estimation proposal, and a discussion on DrahtBot ACK summary improvements.",
+      "Silent Payments update, focusing on a new scanning approach PR in secp256k1 and requesting feedback on APIs."
+    ],
+    "decisions_made": [
+      "TheCharlatan (sedited) was nominated and widely supported to become a Bitcoin Core maintainer."
+    ],
+    "action_items": [
+      "Review various PRs from the Kernel and Benchmarking WGs, including #31132, #34164, #34165, #34023, and secp256k1/pull/1792.",
+      "Create a tracking issue for all coins cache related improvements.",
+      "TheCharlatan (sedited) to open a PR to add his key to trusted-keys.",
+      "Provide feedback on the 'Final notes' section of the incremental mutation testing summary and on PR #34075 for fee estimation.",
+      "cfields and l0rinc to discuss ChaCha20 compiler performance differences after the meeting."
+    ],
+    "mentioned_prs": [
+      33866,
+      34132,
+      34124,
+      33018,
+      34207,
+      34208,
+      31132,
+      34164,
+      34165,
+      34023,
+      33335,
+      1792,
+      34075,
+      27995
+    ],
+    "_text_hash": "41862544f6cae0cdf8f72b725c1045a8"
+  },
+  {
+    "date": "2025-12-18",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-12-18_16_00.log.json",
+    "participant_count": 27,
+    "key_participants": [
+      "stickies-v",
+      "l0rinc_",
+      "pinheadmz",
+      "Novo",
+      "sedited"
+    ],
+    "topics_discussed": [
+      "Fuzzing WG update, including progress on integrating fuzzamoto tests with the functional test framework.",
+      "Kernel WG update, focusing on a new kernel logger specification and a non-locking, copy-on-write chain data structure.",
+      "Benchmarking WG update, covering IBD performance improvements, specific PRs, and ongoing experiments with caching, hashing, and platform testing.",
+      "Silent Payments WG update, including testing of LabelSet scanning, recipient limit proposals, Signet testing, and PSBT integration discussions.",
+      "Discussion on the increasing risk of the libevent dependency and progress on its replacement with an internal HTTP and socket-handling implementation."
+    ],
+    "decisions_made": [
+      "The IRC meetings scheduled for December 25th, 2025, and January 1st, 2026, are skipped. The next meeting will be on January 8th, 2026."
+    ],
+    "action_items": [
+      "Review PRs #33018, #33680, #33866, and #33512 from the Benchmarking WG.",
+      "pinheadmz to rebase PR #32061, run benchmarks, and perform integration tests with various RPC-consuming libraries (electrs, Liana, Core-Lightning, LND, Sparrow).",
+      "Consider bringing up the libevent replacement work (#32061) in Optech for broader testing.",
+      "Novo to break up future Silent Payments WG updates for better digestion."
+    ],
+    "mentioned_prs": [
+      34044,
+      34083,
+      34004,
+      32414,
+      31132,
+      33018,
+      33680,
+      33866,
+      33512,
+      1765,
+      2055,
+      32966,
+      32545,
+      32061
+    ],
+    "_text_hash": "b60230ffda245786e11452aacc4d7268"
+  },
+  {
+    "date": "2025-12-11",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-12-11_16_00.log.json",
+    "participant_count": 21,
+    "key_participants": [
+      "stickies-v",
+      "darosior",
+      "l0rinc",
+      "sipa",
+      "Murch[m]"
+    ],
+    "topics_discussed": [
+      "Benchmarking Working Group Update, including IBD speedups, memory anomalies on low-end devices, and SwiftSync prototype.",
+      "Cluster Mempool Working Group Update, focusing on new PRs for SFL algorithm and optimizations.",
+      "Net Split Working Group Update, with discussion on architectural approaches for inter-process communication (shared memory vs. generic handles).",
+      "Discussion on simplifying the Bitcoin Core release lifecycle by removing the 'End of Maintenance' (EOM) status.",
+      "Updates from Fuzzing, Kernel, and Silent Payments Working Groups."
+    ],
+    "decisions_made": [
+      "The topic 'libevent organization members team needs update' was parked for next week due to connection issues.",
+      "General agreement to simplify the release lifecycle page by removing the 'End of Maintenance' status, as proposed in PR #1200."
+    ],
+    "action_items": [
+      "dergoegge to provide a Fuzzing WG update next week.",
+      "stickies-v to open an RFC issue for node and kernel logging separation.",
+      "Novo to inform Rob about opening a conceptual issue for SwiftSync.",
+      "cfields to schedule a WG call to discuss shared memory vs. generic handles for net split.",
+      "sipa, Murch[m], and darosior to review PR #1200 (release lifecycle page).",
+      "sipa and darosior to review Murch[m]'s patch to BIP 3."
+    ],
+    "mentioned_prs": [
+      30442,
+      33602,
+      31132,
+      33657,
+      34004,
+      31644,
+      1765,
+      34023,
+      32545,
+      33335,
+      1200,
+      33564
+    ],
+    "_text_hash": "b677fb2f263e67383e5ff755d65f0a13"
+  },
+  {
+    "date": "2025-12-04",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-12-04_16_00.log.json",
+    "participant_count": 30,
+    "key_participants": [
+      "darosior",
+      "stickies-v",
+      "sipa",
+      "dergoegge",
+      "Murch[m]"
+    ],
+    "topics_discussed": [
+      "Working Group Updates: Progress was shared from the Kernel, Benchmarking, Cluster Mempool, and Net Split WGs, covering IBD optimizations, mempool follow-ups, and net split meta issues. The Silent Payments WG was proposed for archiving.",
+      "BIP 54 / Consensus Cleanup: An implementation for the Consensus Cleanup proposal is available for review on Bitcoin Inquisition, leading to a discussion on the appropriate review process for consensus changes.",
+      "DNS Seed Removal: The status of PR #33723 to remove a specific DNS seed was discussed, with overwhelming support noted for its merge.",
+      "Outbound Peer Selection Strategy: A new strategy was proposed to improve resistance against eclipse attacks by modifying how outbound connections are selected, prompting a call for further conceptual discussion on its implications."
+    ],
+    "decisions_made": [
+      "The Silent Payments Working Group will be archived due to a lack of recent updates.",
+      "PR #33723, which removes the dnsseed.bitcoin.dashjr-list-of-p2p-nodes.us entry, is considered ready for merge.",
+      "The IRC meeting chair does not require triage permissions on the GitHub repository at this time."
+    ],
+    "action_items": [
+      "Review PRs on the Kernel WG project board.",
+      "Review Benchmarking WG PRs #31132, #30442, and #33602.",
+      "Run and test the recently merged Cluster Mempool follow-ups (from #33591) and review PR #32545.",
+      "Review Silent Payments PR #32966 and the related secp256k1 PR #1765.",
+      "Review the BIP 54 / Consensus Cleanup implementation on Bitcoin Inquisition (PR #99).",
+      "darosior will open a GitHub issue to continue the discussion on the proposed outbound connection selection strategy.",
+      "Maintainers are encouraged to merge PR #33723."
+    ],
+    "mentioned_prs": [
+      31132,
+      25325,
+      30442,
+      33602,
+      33591,
+      32545,
+      32966,
+      1765,
+      33892,
+      33616,
+      33723,
+      33958,
+      99,
+      29691,
+      19858,
+      16599
+    ],
+    "_text_hash": "f73df2f7e0cdd6748433ae4137a5eb02"
+  },
+  {
+    "date": "2025-11-27",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-11-27_16_00.log.json",
+    "participant_count": 18,
+    "key_participants": [
+      "stickies-v",
+      "l0rinc",
+      "Sjors[m]1",
+      "sedited",
+      "sipa"
+    ],
+    "topics_discussed": [
+      "Kernel WG update, including progress on standardizing tests across language bindings.",
+      "Benchmarking WG update, highlighting significant IBD speed improvements from parallel block input fetching (#31132) and other related optimizations.",
+      "Cluster Mempool WG update, announcing the successful merge of Cluster Mempool and discussing follow-up tasks and documentation.",
+      "Stratum v2 WG update, covering a block creation refactor and analysis of block template memory footprint (#33922).",
+      "Net Split WG update, introducing the new meta-issue #33958 and initial work on moving CNode state to Peer."
+    ],
+    "decisions_made": [
+      "The Cluster Mempool feature was successfully merged."
+    ],
+    "action_items": [
+      "Review PR #31132 (validation: fetch block inputs on parallel threads).",
+      "Review PR #33591 (Cluster mempool followups).",
+      "Review PR #32545 (Replace cluster linearization algorithm with SFL).",
+      "Provide feedback on documentation changes and RPC outputs for the newly merged Cluster Mempool feature.",
+      "Check out the new Net Split meta-issue #33958."
+    ],
+    "mentioned_prs": [
+      31132,
+      30442,
+      33602,
+      32497,
+      28280,
+      16957,
+      33591,
+      32545,
+      33922
+    ],
+    "_text_hash": "2bc16e73b718795cbe27de92fa38a74d"
+  },
+  {
+    "date": "2025-11-20",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-11-20_16_02.log.json",
+    "participant_count": 19,
+    "key_participants": [
+      "BlueMatt[m]",
+      "sipa",
+      "Sjors[m]1",
+      "abubakarsadiq",
+      "fjahr"
+    ],
+    "topics_discussed": [
+      "Kernel WG and Benchmarking WG updates, including an RFC for kernel header versioning and performance measurements for InputFetcher.",
+      "Cluster Mempool and Stratum v2 WG updates, covering PR review progress, Rust client development, and a detailed discussion on block template memory management and generation frequency.",
+      "ASMap update: Progress on splitting the embedding PR, ongoing discussions on the `-asmap` argument, and concerns about the reproducibility and trust minimization of the embedded ASMap data."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Leave comments on Kernel WG RFC issue #33911.",
+      "Review Benchmarking WG PRs #33738 and #30442.",
+      "Follow up discussion on Stratum v2 block template memory management and generation frequency in relevant issues or a separate call.",
+      "Follow up discussion on ASMap data reproducibility and trust minimization in `asmap/asmap-data` or tracking issue #33879."
+    ],
+    "mentioned_prs": [
+      33738,
+      30442,
+      33629,
+      33819,
+      33890
+    ],
+    "_text_hash": "4632f6dea7b66013e4166613702f798f"
+  },
+  {
+    "date": "2025-11-13",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-11-13_16_00.log.json",
+    "participant_count": 23,
+    "key_participants": [
+      "stickies-v",
+      "TheCharlatan",
+      "l0rinc",
+      "sipa",
+      "Murch[m]"
+    ],
+    "topics_discussed": [
+      "Kernel WG updates, including follow-ups to #30595 and plans for header versioning.",
+      "Benchmarking WG updates, highlighting recent dead code removals and merkle-tree related PRs seeking review.",
+      "Cluster Mempool WG progress, with #33629 being the current focus for integration.",
+      "Updates from Fuzzing, Silent Payments, Stratum v2, and Net Split WGs (mostly no news).",
+      "Discussion regarding the QML GUI WG's status and temporary removal from the weekly update roster."
+    ],
+    "decisions_made": [
+      "The QML GUI Working Group updates will be temporarily removed from the weekly meeting roster due to the lead's unavailability for regular updates for the rest of the year."
+    ],
+    "action_items": [
+      "TheCharlatan to open an issue to discuss how to version the kernel header.",
+      "Reviewers are requested for merkle-tree related PRs #33805 and #32497.",
+      "stickies-v to discuss priority for 'Ready to Review PRs' within the Kernel WG.",
+      "johnny9dev to inform stickies-v when they are able to provide regular QML GUI WG updates again."
+    ],
+    "mentioned_prs": [
+      30595,
+      33768,
+      33786,
+      33042,
+      33443,
+      33805,
+      32497,
+      33629
+    ],
+    "_text_hash": "f91d1f8c9194a03a936b62d94ee9d7c8"
+  },
+  {
+    "date": "2025-11-06",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-11-06_16_00.log.json",
+    "participant_count": 23,
+    "key_participants": [
+      "stickies-v",
+      "TheCharlatan",
+      "laanwj",
+      "l0rinc",
+      "glozow"
+    ],
+    "topics_discussed": [
+      "Kernel C Header API: Discussion on documentation, language bindings, versioning, testing, and naming conventions following its merge.",
+      "Benchmarking & Performance: Updates on significant speedups for reindex-chainstate, memory leak investigation, and an upcoming article for Bitcoin magazine.",
+      "Cluster Mempool Review Sprint: Plans for an intensive review sprint for PR #33629, aiming for an early merge to facilitate broader testing.",
+      "Working Group Status Updates: Progress from Silent Payments, Stratum v2, and Net Split WGs, and a decision to put Erlay and Multiprocess WGs into dormant status."
+    ],
+    "decisions_made": [
+      "The Cluster Mempool PR (#33629) will aim for an early merge into master (within the next couple of weeks) to facilitate more testing.",
+      "The Erlay and Multiprocess Working Groups will be removed from the regular meeting rotation until their champions reach out to reactivate them."
+    ],
+    "action_items": [
+      "TheCharlatan will open an issue to discuss versioning schemes for the Kernel C header API.",
+      "purpleKarrot will prepare a PR to propose changes to the Kernel C header API naming conventions.",
+      "l0rinc will provide the IRC handle for Andrew Toth to be added to the Benchmarking Working Group.",
+      "Interested participants for the Cluster Mempool review sprint should comment in #bitcoin-core-pr-reviews.",
+      "cfields will open an issue for the Net Split WG next week, outlining subprojects and a high-level plan."
+    ],
+    "mentioned_prs": [
+      30595,
+      31132,
+      1765,
+      28122,
+      28201,
+      32966,
+      33629,
+      33676,
+      33745,
+      30442,
+      33042,
+      33443,
+      33768,
+      33786
+    ],
+    "_text_hash": "022a47709e11f4ff85845b7831673837"
+  },
+  {
+    "date": "2025-10-30",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-10-30_16_00.log.json",
+    "participant_count": 22,
+    "key_participants": [
+      "achow101",
+      "l0rinc",
+      "stickies-v",
+      "_aj_",
+      "abubakarsadiq"
+    ],
+    "topics_discussed": [
+      "Updates from various Working Groups, including Kernel, Benchmarking, QML GUI, and Script Validation.",
+      "Discussion and volunteering for a rotating IRC meeting chair role.",
+      "Policy discussion regarding handling inactive Working Groups in the meeting update rotation."
+    ],
+    "decisions_made": [
+      "A rotation for IRC meeting chairs will be set up.",
+      "The Silent Payments Working Group will be removed from the meeting update rotation until a new champion emerges.",
+      "Working Groups will be removed from the update rotation if their champions are absent for 'n' consecutive meetings (with n=2 suggested and generally agreed upon)."
+    ],
+    "action_items": [
+      "TheCharlatan to continue seeking review for PR #30595 (Kernel WG).",
+      "l0rinc to continue work on sorted UTXO fetching and simpler SipHash implementations for the Benchmarking WG.",
+      "johnny9dev to submit a PR for `depends/guix` building for the QML GUI project.",
+      "fjahr to seek feedback on PR #33740 (Script Validation WG).",
+      "achow101 to coordinate privately with fjahr, stickies-v, and abubakarsadiq regarding the IRC meeting chair rotation.",
+      "dergoegge to prototype a bot for chairing IRC meetings.",
+      "Working Group members to update the `bitcoin-devwiki` to remove inactive working groups."
+    ],
+    "mentioned_prs": [
+      30595,
+      33629,
+      33740,
+      49
+    ],
+    "_text_hash": "0418d73dbfdf4dc77fb9ff0defc417f9"
+  },
+  {
+    "date": "2025-10-16",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-10-16_16_00.log.json",
+    "participant_count": 17,
+    "key_participants": [
+      "sipa",
+      "achow101",
+      "instagibbs",
+      "glozow",
+      "TheCharlatan"
+    ],
+    "topics_discussed": [
+      "Kernel WG: Seeking reviews for PR #30595, introducing a C header API.",
+      "Cluster Mempool WG: PR #33157 (TxGraph memory usage) merged, focus shifting to the main cluster mempool PR #33629, with ongoing performance benchmarking.",
+      "MuSig2 WG: PR #29675 (wallet integration) merged, a follow-up PR #33636 opened, and the working group is concluding its main efforts."
+    ],
+    "decisions_made": [
+      "The Cluster Mempool WG plans to maintain a maximum cluster transaction count of 64, pending final simulation results.",
+      "A general consensus was expressed that 'non-actionable' policies, such as RBF rules, are not suitable for BIPs.",
+      "The MuSig2 Working Group is considered complete following the successful merge of the main wallet integration PR."
+    ],
+    "action_items": [
+      "More reviews are requested for PR #30595 (Kernel C header API).",
+      "Sdaftuar and sipa to continue final benchmarking and simulations for cluster mempool performance and optimality.",
+      "Sipa plans to push a significantly updated version of PR #32545 (SFL).",
+      "Consider updating BIP 125 to reflect its relevance and changes post-cluster mempool, if its authors/champions agree."
+    ],
+    "mentioned_prs": [
+      30595,
+      33157,
+      33629,
+      33591,
+      32545,
+      29675,
+      33636
+    ],
+    "_text_hash": "101c7455ecfdaf38b55f1d761cd8cea5"
+  },
+  {
+    "date": "2025-10-09",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-10-09_16_00.log.json",
+    "participant_count": 18,
+    "key_participants": [
+      "achow101",
+      "corebot`",
+      "sipa",
+      "cfields",
+      "TheCharlatan"
+    ],
+    "topics_discussed": [
+      "Kernel WG Update: Progress on the initial C header API (#30595) with positive feedback and a call for more review.",
+      "Cluster Mempool WG Update: Review progress on memory usage optimization (#33157) and ongoing simulation work for block building optimality, with #28676 ready for review.",
+      "MuSig2 WG Update: #29675 for wallet support of MuSig2 aggregate keys is nearing readiness for merge with sufficient ACKs.",
+      "Release Status: v30.0rc3 is out, with the final tag scheduled for tomorrow, and 28.3rc1/29.2rc2 also available for testing.",
+      "Release Criticality Discussion: Discussion around the urgency of #33517 (multiprocess logging overhead) and #33577 (qrencode URL revert) for the upcoming release."
+    ],
+    "decisions_made": [
+      "The decision was made to likely ship v30.0 without #33517 due to its draft status and the lateness of the release cycle, despite its potential overhead."
+    ],
+    "action_items": [
+      "Review #30595 (Kernel C header API).",
+      "Provide ACKs for #33577 (qrencode URL revert) and related PRs.",
+      "Review #28676 (Cluster mempool implementation)."
+    ],
+    "mentioned_prs": [
+      30595,
+      33157,
+      28676,
+      29675,
+      33577,
+      33517
+    ],
+    "_text_hash": "068c6a0ef2c2d6cd8c9215a74cb4c5a7"
+  },
+  {
+    "date": "2025-10-02",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-10-02_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "glozow",
+      "kevkevin",
+      "cfields"
+    ],
+    "topics_discussed": [
+      "Cluster Mempool Working Group update, including block building performance analysis and progress on package RBF/test accept.",
+      "MuSig2 Working Group update, focusing on addressing review comments for PR 29675.",
+      "v30.0 release status, discussing RC2 testing, expected RC3, and release timeline."
+    ],
+    "decisions_made": [
+      "The v30.0 release tag date has been pushed back to October 10th, 2025."
+    ],
+    "action_items": [
+      "Sipa to share diagrams related to block building performance post-clustermempool."
+    ],
+    "mentioned_prs": [
+      28676,
+      29675
+    ],
+    "_text_hash": "13f45b79700af00f689fc1a55dec3484"
+  },
+  {
+    "date": "2025-09-25",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-09-25_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "achow101",
+      "cfields",
+      "marcofleon",
+      "janb84",
+      "hebasto"
+    ],
+    "topics_discussed": [
+      "MuSig2 Working Group Update and progress on PR #29675.",
+      "Bitcoin Core 30.0 release status, including RC2 tagging and testing feedback.",
+      "cfields' update on network architecture refactoring and a new multiprocess P2P implementation."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "achow101 to continue addressing comments on PR #29675 (MuSig2).",
+      "cfields to clean up the net/net_processing separation branch and prepare a writeup of proposed architectural changes next week.",
+      "cfields to demo and discuss the multiprocess bitcoin-p2p at coredev.",
+      "cfields to consider starting a working group for net projects; if formed, add it to the bitcoin-devwiki."
+    ],
+    "mentioned_prs": [
+      29675,
+      215
+    ],
+    "_text_hash": "acb84667c641811335cbda6529f48490"
+  },
+  {
+    "date": "2025-09-18",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-09-18_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "fanquake",
+      "sipa",
+      "hebasto",
+      "achow101",
+      "darosior"
+    ],
+    "topics_discussed": [
+      "Kernel WG Update: Review requested for the initial C header API PR.",
+      "Cluster Mempool & Stratum v2 WG Updates: Progress on PRs, future work discussions, and multiprocess subtree versioning.",
+      "v30.0 Release Status: Addressing issues found in rc1, planning for rc2, milestone updates, and noting performance improvements.",
+      "MuSig2 WG Update: Ongoing work on a wallet PR, addressing comments.",
+      "Build Platform Compatibility: Discussion on supporting Ubuntu 22.04 LTS, minimum CMake version, and addressing glibc runtime compatibility for older Linux distributions."
+    ],
+    "decisions_made": [
+      "PR #33422 (build: Remove lingering Windows registry & shortcuts) was added to the v30.0 milestone.",
+      "The project will continue to support Ubuntu 22.04 LTS as a build platform until its upstream EOL in 2027, and will not require users to install newer CMake from external sources."
+    ],
+    "action_items": [
+      "fanquake will do a Proof of Concept (POC) for shipping static musl release builds to address glibc compatibility issues for older Linux distributions."
+    ],
+    "mentioned_prs": [
+      30595,
+      28676,
+      33157,
+      33374,
+      29675,
+      33424,
+      33356,
+      32132,
+      33422,
+      33333,
+      33336,
+      29987
+    ],
+    "_text_hash": "69e439f281c39d60245e432e6b4531c3"
+  },
+  {
+    "date": "2025-09-11",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-09-11_16_00.log.json",
+    "participant_count": 22,
+    "key_participants": [
+      "achow101",
+      "l0rinc",
+      "sipa",
+      "TheCharlatan",
+      "hebasto"
+    ],
+    "topics_discussed": [
+      "Kernel WG update, including discussion on external user-motivated kernel changes and C header API adaptations.",
+      "v30.0rc1 release status, concerns regarding node performance, dbcache settings, and block obfuscation.",
+      "Cluster Mempool WG update, focusing on progress with the main implementation PR #28676.",
+      "QML GUI WG update, with work ongoing on adding QML testing for view coverage.",
+      "MuSig2 WG update, with continued review and addressing comments on PR #29675."
+    ],
+    "decisions_made": [
+      "PR #33324 (reobfuscation) will not be included in v30.0rc1 due to its draft status and open questions.",
+      "PRs #33336 (signature verification logging) and #33333 (dbcache warning log) are considered suitable for inclusion in v30.0rc1."
+    ],
+    "action_items": [
+      "darosior to test v30.0rc1 in the coming week.",
+      "Test the mining interface, potentially through Sjors' client or by expanding Python functional tests.",
+      "Postpone discussion on dropping Ubuntu 22.04 LTS support until a later meeting."
+    ],
+    "mentioned_prs": [
+      32317,
+      33336,
+      33333,
+      33324,
+      28676,
+      29675
+    ],
+    "_text_hash": "48b91f6eac69eea2b2bb7defcef51918"
+  },
+  {
+    "date": "2025-09-04",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-09-04_16_00.log.json",
+    "participant_count": 19,
+    "key_participants": [
+      "achow101_",
+      "sipa",
+      "janb84",
+      "TheCharlatan",
+      "johnny9dev"
+    ],
+    "topics_discussed": [
+      "Updates from various working groups including MuSig2, QML GUI, Script Validation, Kernel, and Cluster Mempool.",
+      "Planning and status for the Bitcoin Core v30.0 release, including the upcoming branch off.",
+      "Discussion and volunteering for the development of a testing guide for Bitcoin Core."
+    ],
+    "decisions_made": [
+      "PR #33201 (Add functional test for IPC interface) was added to the v30.0 milestone.",
+      "Janb84 volunteered to work on the testing guide, which was accepted."
+    ],
+    "action_items": [
+      "Review items in the v30.0 milestone (https://github.com/bitcoin/bitcoin/milestone/72) before the branch off scheduled for this Saturday.",
+      "Provide conceptual review on PR #32317 (kernel: Separate UTXO set access from validation functions).",
+      "Janb84 to work on the testing guide, utilizing existing dev wiki permissions."
+    ],
+    "mentioned_prs": [
+      29675,
+      30595,
+      32317,
+      33201
+    ],
+    "_text_hash": "88d3bda377709de85a877a0357449fa1"
+  },
+  {
+    "date": "2025-08-28",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-08-28_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "achow101",
+      "l0rinc",
+      "_aj_",
+      "eugenesiegel",
+      "stickies-v"
+    ],
+    "topics_discussed": [
+      "Updates from Stratum v2, MuSig2, QML GUI, and Benchmarking working groups.",
+      "Discussion on the 30.0 feature freeze, including milestone review and bugfix PRs.",
+      "Challenges with updating translation strings in release branches due to Transifex policy.",
+      "Initial Block Download (IBD) performance measurements on Raspberry Pis.",
+      "Review requests and complexity assessment for specific pull requests."
+    ],
+    "decisions_made": [
+      "PR #33208 (Indexes stuck on unknown best block) was removed from the 30.0 milestone.",
+      "The proposed change in PR #33224 (doc: unify `datacarriersize` warning) will not be merged for 30.0 due to translation policy constraints."
+    ],
+    "action_items": [
+      "Review MuSig2 PR #29675.",
+      "johnny9dev to continue testing for the QML GUI, covering C++ modules and QML views, using Qt's unittest framework.",
+      "Reviewers were requested for PR #33189 (rpc: followups for 33106).",
+      "eugenesiegel will review PR #32159 (net, pcp: handle multi-part responses)."
+    ],
+    "mentioned_prs": [
+      31802,
+      29675,
+      497,
+      32043,
+      33208,
+      33224,
+      33189,
+      33106,
+      32159
+    ],
+    "_text_hash": "db69e743140d14f7e49a4c9109e8d645"
+  },
+  {
+    "date": "2025-08-21",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-08-21_16_00.log.json",
+    "participant_count": 16,
+    "key_participants": [
+      "achow101",
+      "l0rinc",
+      "fanquake",
+      "jon_atack",
+      "dzxzg"
+    ],
+    "topics_discussed": [
+      "Kernel Working Group update",
+      "MuSig2 Working Group update",
+      "Bitcoin Core 30.0 feature freeze and milestone review"
+    ],
+    "decisions_made": [
+      "PR #32579 (headerssync: Preempt unrealistic unit test behavior) will be dropped from the 30.0 milestone and merged after branching.",
+      "PR #33224 (doc: unify `datacarriersize` warning with release notes) will not be added to the 30.0 milestone due to translation string freeze and lack of semantic change."
+    ],
+    "action_items": [
+      "Developers are requested to review remaining bug fix PRs in the 30.0 milestone.",
+      "jon_atack will re-scope PR #32051 to focus on IBD-only changes for future consideration.",
+      "Cory (theuni) is expected to follow up on PR #32592."
+    ],
+    "mentioned_prs": [
+      32579,
+      33224,
+      32051,
+      32592,
+      32714
+    ],
+    "_text_hash": "a9864b203799b4df1304ba7dc37bb8c5"
+  },
+  {
+    "date": "2025-08-14",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-08-14_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "Sjors[m]1",
+      "l0rinc",
+      "TheCharlatan"
+    ],
+    "topics_discussed": [
+      "Updates from various Working Groups (Erlay, Kernel, Benchmarking, Cluster Mempool, MuSig2, QML GUI, Script Validation).",
+      "Status of the v30.0 feature freeze and review of milestone items.",
+      "Discussion on including a UTXO set flushing optimization (#31645) in v30.0.",
+      "Proposal to add IPC binaries (#31802) to the v30.0 release, including concerns about testing, review, and crash bugs.",
+      "A brief discussion on potential dbcache reseeding strategies."
+    ],
+    "decisions_made": [
+      "PR #31645 (UTXO set flushing optimization) will not be explicitly added to the v30.0 milestone, but can still be included if it receives sufficient review before the feature freeze."
+    ],
+    "action_items": [
+      "Review the initial Erlay implementation PR.",
+      "Review PR #29675 (MuSig2 wallet support).",
+      "Review items in the v30.0 milestone, as feature freeze is in 6 days.",
+      "Review PR #31802 (Add bitcoin-{node,gui} to release binaries for IPC) and issue #31756 (RFC: Adding bitcoin-{node,gui} binaries for IPC in 30.0 release).",
+      "Sjors[m]1 to encourage users interested in IPC binaries to comment on PR #31802 and issue #31756.",
+      "Further discussion regarding IPC binaries to continue in the relevant PR/issue."
+    ],
+    "mentioned_prs": [
+      33078,
+      31534,
+      31645,
+      29675,
+      31802,
+      31756,
+      32345
+    ],
+    "_text_hash": "303d38fd6b194d23de1d71da94077ba5"
+  },
+  {
+    "date": "2025-08-07",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-08-07_16_00.log.json",
+    "participant_count": 22,
+    "key_participants": [
+      "achow101",
+      "darosior",
+      "sipa",
+      "fanquake",
+      "l0rinc"
+    ],
+    "topics_discussed": [
+      "Updates from Cluster Mempool and MuSig2 Working Groups.",
+      "Discussion and additions to the v30.0 feature freeze milestone.",
+      "Debate on backporting the fee policy PR (#33106) to v29.1.",
+      "Status of v29.1rc1 testing among contributors.",
+      "Investigation into excessive header hashing during IBD."
+    ],
+    "decisions_made": [
+      "Pull Requests #33050, #32473, #32579, #33021, #32975, and #33106 were added to the v30.0 milestone."
+    ],
+    "action_items": [
+      "Review #28676 (Cluster mempool implementation).",
+      "Review #29675 (MuSig2 wallet support).",
+      "Prioritize review for #33106 (lowering default fees) to get it into master, with a suggestion to coordinate review within the next week.",
+      "l0rinc will benchmark header hashing without SHA256 hardware acceleration.",
+      "l0rinc may open a PR for header hashing deduplication.",
+      "hodlinator will clarify the relevance of #32579 for v30."
+    ],
+    "mentioned_prs": [
+      28676,
+      29675,
+      31244,
+      33050,
+      32473,
+      32579,
+      33021,
+      32975,
+      33106,
+      33105
+    ],
+    "_text_hash": "261fed0ff4c22e469fb648f885c56453"
+  },
+  {
+    "date": "2025-07-31",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-07-31_16_00.log.json",
+    "participant_count": 23,
+    "key_participants": [
+      "achow101",
+      "l0rinc",
+      "phantomcircuit",
+      "darosior",
+      "TheCharlatan"
+    ],
+    "topics_discussed": [
+      "Kernel WG and Stratum v2 WG updates, including specific PRs (#31679, #31802) for the upcoming feature freeze.",
+      "MuSig2 WG and Orphan Resolution WG updates, highlighting PRs (#31244, #32941) needing review for v30.",
+      "QML GUI WG progress on migrating to submodule, cmake, and Qt6, and the need for an upstream UTXO snapshot interface for PR #485.",
+      "Discussion on `dbwrapper` error handling (#33042) and the proposed CI migration to hosted Cirrus Runners (#32989).",
+      "IBD performance improvements, specifically investigating excessive block hash recalculations and seeking reviewers for UTXO set write optimizations (#31645) and Merkle root calculation (#32497)."
+    ],
+    "decisions_made": [
+      "Consensus to remove the unused boolean return value from `dbwrapper` write methods, as errors are already handled via exceptions/FatalErrors."
+    ],
+    "action_items": [
+      "glozow to review PR #31244 (MuSig2 descriptors).",
+      "l0rinc to add meeting feedback to PR #33042 (dbwrapper refactor).",
+      "Reviewers are sought for PR #32989 (CI migration to Cirrus Runners).",
+      "phantomcircuit to collaborate with l0rinc and other IBD improvement contributors to investigate the block hash recalculation issue.",
+      "Reviewers are sought for PRs #31645 (IBD UTXO set flush) and #32497 (Merkle pre-reserve leaves); help with reproducers for #31645 is also requested."
+    ],
+    "mentioned_prs": [
+      31679,
+      31802,
+      31244,
+      29675,
+      32941,
+      485,
+      33042,
+      32989,
+      31144,
+      32279,
+      31645,
+      32497
+    ],
+    "_text_hash": "7b2b10eba7406557c753a2d750a34ee6"
+  },
+  {
+    "date": "2025-07-24",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-07-24_16_01.log.json",
+    "participant_count": 16,
+    "key_participants": [
+      "achow101",
+      "Sjors[m]1",
+      "johnny9dev",
+      "glozow",
+      "fjahr"
+    ],
+    "topics_discussed": [
+      "Stratum v2 Working Group Update",
+      "MuSig2 Working Group Update",
+      "Orphan Resolution Working Group Update",
+      "QML GUI Working Group Update",
+      "Script Validation Working Group Update"
+    ],
+    "decisions_made": [
+      "Pinheadmz's PR #475 (Add cmake, qt6, and bitcoin core submodule) was approved and merged into the `qt6` branch of the `gui-qml` project.",
+      "The default branch of the `gui-qml` project was switched to the `qt6` branch."
+    ],
+    "action_items": [
+      "Review/ACK #31802 (Add bitcoin-{node,gui} to release binaries for IPC).",
+      "Review/ACK #31679 (cmake: Move internal binaries from bin/ to libexec/), especially by build system experts.",
+      "Sjors to catch up on MuSig2 code review (likely #31244).",
+      "Glozow is working on follow-ups for orphan resolution in #32941; after which, focus will shift to package validation and BIP331.",
+      "Review #32885 (Cache m_cached_finished_ibd where SetTip is called).",
+      "Johnny9dev is migrating previous QML GUI work to the new `qt6` branch.",
+      "Review secp256k1#1134 (Add an experimental batch module)."
+    ],
+    "mentioned_prs": [
+      31802,
+      31679,
+      31244,
+      31829,
+      32941,
+      32885,
+      475,
+      1134
+    ],
+    "_text_hash": "81d01981e7c33b885e1ea6432aff9960"
+  },
+  {
+    "date": "2025-07-17",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-07-17_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "laanwj",
+      "glozow",
+      "darosior",
+      "stickies-v",
+      "fanquake"
+    ],
+    "topics_discussed": [
+      "Erlay and QML GUI Working Group Updates",
+      "Orphan Resolution Working Group Update",
+      "Proposal to enable NAT-PMP/PCP by default in Bitcoin Core 30.0",
+      "Discussion on backports for the upcoming 29.1 release"
+    ],
+    "decisions_made": [
+      "Consensus to enable NAT-PMP/PCP by default in Bitcoin Core 30.0, pending a dedicated PR."
+    ],
+    "action_items": [
+      "Review Erlay PR #30116.",
+      "johnny9dev to review QML GUI PR #475 and rebase his current work.",
+      "darosior to open a PR to enable NAT-PMP/PCP by default.",
+      "Review 29.1 backport PRs, specifically #32863 and #32521.",
+      "glozow to review #32521."
+    ],
+    "mentioned_prs": [
+      30116,
+      475,
+      31829,
+      32941,
+      31663,
+      32159,
+      32863,
+      32292,
+      32589,
+      32810,
+      32521
+    ],
+    "_text_hash": "bcdbbfc552cd5aa5180a0f7cae2d0967"
+  },
+  {
+    "date": "2025-07-10",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-07-10_16_00.log.json",
+    "participant_count": 29,
+    "key_participants": [
+      "achow101",
+      "pinheadmz",
+      "johnny9dev",
+      "sr_gi[m]1",
+      "fanquake"
+    ],
+    "topics_discussed": [
+      "Erlay network simulation results, showing INV message savings and latency, and improvements to testing methodology for larger networks.",
+      "Discussion on the Kernel library's C vs C++ API, seeking renewed input on PR #30595.",
+      "Updates on Cluster Mempool development, including recent merges and upcoming PRs for TxGraph work controls and cluster linearization tests.",
+      "Progress on the QML GUI, exploring a new branch strategy within the existing repository to facilitate development towards CMake and Qt6.",
+      "Updates on orphan transaction resolution, with PR #31829 nearing completion and a followup PR #32941 for cleanups."
+    ],
+    "decisions_made": [
+      "The QML GUI team will proceed with exploring a new default branch (e.g., \"qt6\" or \"dev\") in the existing `bitcoin-core-app` repository, potentially with a clean history, to aid in development and migration to CMake and Qt6."
+    ],
+    "action_items": [
+      "sr_gi to make Erlay simulations easily reproducible and test the new data collection approach for bigger networks.",
+      "sr_gi and cfields to discuss p2p scaling bottlenecks.",
+      "sipa to reach out to cfields regarding p2p bottlenecks.",
+      "TheCharlatan to continue seeking comments and engagement on PR #30595 (Kernel C/C++ API).",
+      "sdaftuar to rebase PR #28676 (Cluster mempool implementation) on top of the recently merged TxGraph changes and consider splitting off parts.",
+      "johnny9dev, hebasto, and pinheadmz to work on sorting out PRs and migrating them to the new QML GUI branch."
+    ],
+    "mentioned_prs": [
+      30116,
+      30595,
+      31553,
+      32263,
+      28676,
+      30605,
+      31244,
+      31829,
+      32941
+    ],
+    "_text_hash": "b8c979fb802f5ba633d553445796b40d"
+  },
+  {
+    "date": "2025-07-03",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-07-03_16_00.log.json",
+    "participant_count": 22,
+    "key_participants": [
+      "sipa",
+      "glozow",
+      "achow101",
+      "abubakarsadiq",
+      "l0rinc"
+    ],
+    "topics_discussed": [
+      "Erlay simulation progress, including identified propagation time issues and ongoing re-runs for various network sizes.",
+      "Fuzzing updates, highlighting two new bugs found by fuzzamoto and the implementation of a 'netsplit' oracle.",
+      "Cluster Mempool `TxGraph` API nearing completion with PRs #31553 and #30605, and plans to integrate the full cluster mempool implementation (#28676).",
+      "Orphan resolution DoS improvements, specifically addressing `EraseForBlock` performance issues and proposing a new DoS score based on transaction input count.",
+      "Discussion on mempool updates during Initial Block Download (IBD), particularly regarding redundant fee estimator notifications for empty removals."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "sr_gi to complete Erlay simulations for small, medium, and large networks and report back next week.",
+      "Review PR #32869 (netsplit oracle fix).",
+      "l0rinc to continue investigating the mempool in IBD issue and add insights to relevant PRs."
+    ],
+    "mentioned_prs": [
+      32869,
+      31553,
+      30605,
+      28676,
+      31244,
+      31829,
+      450,
+      472,
+      32748
+    ],
+    "_text_hash": "906ae7bafdedd5e259779ba63840a560"
+  },
+  {
+    "date": "2025-06-26",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-06-26_16_00.log.json",
+    "participant_count": 19,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "glozow",
+      "sr_gi[m]1",
+      "instagibbs"
+    ],
+    "topics_discussed": [
+      "Erlay WG update: An issue causing artificially fast propagation times in simulations was identified and patched, with re-simulation underway.",
+      "Kernel WG update: Exploring approaches to split `cs_main` for improved validation function calls and seeking review for PR #32317.",
+      "Orphan Resolution WG update: PR #31829 is progressing, with ongoing discussion and work on benchmarking and fuzz testing.",
+      "QML GUI WG update: A successful demo was presented at BTCPrague, and work is underway to integrate new features and plan for CI/release.",
+      "Mutation Testing update: Integrated into `corecheck.dev/mutation` with weekly reports, highlighting 326 unkilled mutants for test improvement."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "sr_gi to re-simulate Erlay propagation times after patching the identified issue and report results next week.",
+      "TheCharlatan to continue exploring approaches for splitting `cs_main` and allowing `net_processing` to call validation functions, and to seek review for PR #32317.",
+      "glozow to address newer comments on PR #31829 regarding benchmarking and bring back `EraseForBlock` benchmarks.",
+      "johnny9dev to set up PRs to update the `gui-qml` repo with features added for the demo, and to focus on rebase, submoduling, CI, and release for the QML GUI project.",
+      "fjahr to ask for an update on the secp batch PR.",
+      "The transfer of the `asmap-data` repository to the `bitcoin-core` organization to be discussed on the relevant PR."
+    ],
+    "mentioned_prs": [
+      32317,
+      31244,
+      31829
+    ],
+    "_text_hash": "aba8351295adff6728d4a297625aa6f9"
+  },
+  {
+    "date": "2025-06-19",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-06-19_16_00.log.json",
+    "participant_count": 17,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "darosior",
+      "maflcko",
+      "corebot`"
+    ],
+    "topics_discussed": [
+      "Kernel WG update, including review requests for PRs #32317 and #32427, and conceptual feedback on block storage.",
+      "Erlay WG update, focusing on issues with warnet simulation propagation time measurements and seeking additional review.",
+      "Cluster Mempool WG update, highlighting priority review for #31553 and #30605, and rebased #32545.",
+      "MuSig2 WG update, noting the merge of bips#1867 and that #31244 is updated and ready for review.",
+      "Discussion on moving the `bitcoin/bitcoin` repository to a `bitcoin-core` organization, weighing technical benefits (CI, shared caches) against non-technical concerns and potential confusion."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "TheCharlatan might write up a proposal for the counter-suggestion of writing single block files and removing the block index.",
+      "sr_gi will clean up and prepare the warnet test setup for Erlay simulations to be easily reproducible for review.",
+      "Further discussion regarding moving the `bitcoin/bitcoin` repository should continue in GitHub issue #32340."
+    ],
+    "mentioned_prs": [
+      32317,
+      32427,
+      30277,
+      31553,
+      30605,
+      32545,
+      1867,
+      31244,
+      31965,
+      32340
+    ],
+    "_text_hash": "34ee4f7d4a6568358da24c1db4b25711"
+  },
+  {
+    "date": "2025-06-12",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-06-12_16_00.log.json",
+    "participant_count": 29,
+    "key_participants": [
+      "sipa",
+      "achow101",
+      "corebot`",
+      "l0rinc",
+      "dergoegge"
+    ],
+    "topics_discussed": [
+      "Fuzzing WG Update: Progress on Fuzzamoto, improved net_processing and reorg coverage, seeking bug oracle ideas and real p2p/validation bugs.",
+      "Kernel WG Update: Progress on flat-file BlockTreeDB replacement (#32427) and discussion on deferring on-disk block format changes.",
+      "Benchmarking & IBD Optimizations: Updates on XOR block obfuscation, benchmarking on Raspberry Pi, memory usage analysis, and compiler differences for IBD speedup.",
+      "Cluster Mempool & MuSig2 Updates: Review progress on TxGraph reorg support (#31553), benchmarking linearization (#32545), and MuSig2 descriptor PR (#31244).",
+      "QML GUI & Code Coverage: Progress on rebasing QML GUI to CMake+Qt6 and a poll on code coverage tooling indicating a shift towards Clang/LLVM."
+    ],
+    "decisions_made": [
+      "The discussion regarding changing the on-disk block format (e.g., one-file-per-block) for PR #32427 will be punted/deferred to avoid halting the flat index changes.",
+      "There was an implicit consensus that most developers use Clang/LLVM tools for code coverage, and the chair was fine with replacing GCC-based coverage instructions."
+    ],
+    "action_items": [
+      "dergoegge is seeking ideas for bug oracles and a collection of real p2p/validation bugs for Fuzzamoto.",
+      "Review requested for PR #32317 (kernel: Separate UTXO set access from validation functions).",
+      "Further discussion on code coverage tooling (GCC vs. Clang) to happen in issue #31047.",
+      "Review requested for PR #31244 (descriptors: MuSig2).",
+      "Intensive benchmarking instructions for the new linearization algorithm in #32545 are available for participation."
+    ],
+    "mentioned_prs": [
+      32427,
+      32317,
+      32545,
+      28531,
+      32043,
+      31553,
+      30605,
+      31244,
+      470,
+      472,
+      31047
+    ],
+    "_text_hash": "fab32666e1e3cbde5127963bf4b59164"
+  },
+  {
+    "date": "2025-06-05",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-06-05_16_00.log.json",
+    "participant_count": 21,
+    "key_participants": [
+      "achow101",
+      "johnny9dev",
+      "sipa",
+      "fjahr",
+      "glozow"
+    ],
+    "topics_discussed": [
+      "Updates from the Kernel, Cluster Mempool, MuSig2, Orphan Resolution, and Script Validation Working Groups, including specific PRs for review and progress reports.",
+      "Extensive progress reported by the QML GUI Working Group on multiple features, including new animations, standard fee selection, multi-recipient support, and form input validation.",
+      "Discussion regarding a proposal to drop a BIP 390 restriction on duplicate participants in `musig()` descriptors for MuSig2 due to implementation complexity."
+    ],
+    "decisions_made": [
+      "Triage permissions for the QML GUI repository will be granted to johnny9dev."
+    ],
+    "action_items": [
+      "Review PR #32317 (Kernel WG: Separate UTXO set access from validation functions).",
+      "Review PR #31553 (Cluster Mempool: Add TxGraph reorg functionality).",
+      "Help with benchmarking for PR #32545 (Cluster Mempool: New algorithm benchmarks).",
+      "Review PR #31244 (MuSig2: Descriptors).",
+      "Review PR #31829 (Orphan Resolution: Improve TxOrphanage denial of service bounds).",
+      "Provide ideas for splitting PR #31829.",
+      "Johnny9dev to start build/depends work for QML GUI in July.",
+      "Fix taproot test for PR #29491 (Script Validation: Schnorr batch verification for blocks).",
+      "Await update on the secp PR blocking #29491."
+    ],
+    "mentioned_prs": [
+      32317,
+      30605,
+      31553,
+      32545,
+      31244,
+      31829,
+      460,
+      461,
+      463,
+      450,
+      462,
+      464,
+      465,
+      29491
+    ],
+    "_text_hash": "5f25857c5021600a534074d801be82dc"
+  },
+  {
+    "date": "2025-05-29",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-05-29_16_00.log.json",
+    "participant_count": 14,
+    "key_participants": [
+      "achow101",
+      "jonatack",
+      "sipa",
+      "gmaxwell",
+      "cfields"
+    ],
+    "topics_discussed": [
+      "Kernel Working Group update (no progress reported).",
+      "MuSig2 Working Group update, with PR #31244 still undergoing review.",
+      "QML GUI Working Group progress, including several recent merges (QR code, loading animations, compile fix) and undrafting the multiple recipients PR, with upcoming work on fee selection and deployment research.",
+      "Cluster Mempool Working Group update, with PR #31553 under review and PR #32545 (replacing linearization algorithm) ready for review.",
+      "Discussion on publishing a statement regarding transaction relay policy, focusing on whether to include explicit signatures from contributors and the potential implications of doing so."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Provide further comments on the transaction relay policy statement gist (https://gist.github.com/sipa/2521731e65ba779e3ce9f9305c6a538c)."
+    ],
+    "mentioned_prs": [
+      31244,
+      454,
+      455,
+      459,
+      458,
+      450,
+      31553,
+      32545
+    ],
+    "_text_hash": "4b9e323f2bf3daa751d0b17244777e3c"
+  },
+  {
+    "date": "2025-05-22",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-05-22_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "achow101",
+      "gmaxwell",
+      "sipa",
+      "fanquake",
+      "glozow"
+    ],
+    "topics_discussed": [
+      "Kernel Working Group Update, including discussions on library role and upcoming PRs for review.",
+      "Cluster Mempool Working Group Update, focusing on review for the next TxGraph PR and a new linearization algorithm.",
+      "MuSig2 Working Group Update, with two remaining PRs (#31244, #29675) needing review and testing.",
+      "Orphan Resolution Working Group Update, presenting #31829 for review and discussing fuzzer development.",
+      "Discussion on a proposed Statement on Transaction Relay Policy for the bitcoincore.org website."
+    ],
+    "decisions_made": [
+      "Sipa will open a Pull Request on the bitcoincore.org website for the transaction relay policy statement, initially without a list of signatories.",
+      "The PR for the transaction relay policy statement will likely have restricted interaction to frequent contributors."
+    ],
+    "action_items": [
+      "TheCharlatan to open demo repositories and draft PRs related to the kernel library's role and potential splitting.",
+      "Review Kernel WG PRs #32317 and #31382.",
+      "Review Cluster Mempool PRs #31553 and #32545.",
+      "Review MuSig2 PRs #31244 and #29675.",
+      "Review Orphan Resolution PR #31829.",
+      "QML GUI WG to focus on getting bitcoin-core/gui-qml#450 mergable, implementing more of the Receive page, and adding input validation and error strings to the Send page.",
+      "Contributors with Microsoft accounts are encouraged to upvote Bitcoin Core-related MSVC issue reports.",
+      "Sipa to open a PR on the bitcoincore.org website for the transaction relay policy statement."
+    ],
+    "mentioned_prs": [
+      32317,
+      31382,
+      31553,
+      32545,
+      31244,
+      29675,
+      31829,
+      454,
+      453,
+      450
+    ],
+    "_text_hash": "82f5815125d40f858624902d3cd95d73"
+  },
+  {
+    "date": "2025-05-15",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-05-15_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "darosior",
+      "achow101",
+      "sipa",
+      "Murch[m]",
+      "pinheadmz"
+    ],
+    "topics_discussed": [
+      "Kernel Working Group update, including PRs for UTXO set separation and BlockTreeDB replacement, and potential optimizations.",
+      "Cluster Mempool Working Group update, covering merged PRs, next review items, and research on the SFL linearization algorithm.",
+      "MuSig2 Working Group update, focusing on review and rebasing efforts for PSBT and descriptor PRs.",
+      "QML GUI Working Group update, detailing merged UI features, ongoing development, and discussions around rebase and design patterns.",
+      "Discussion on improving communication regarding Bitcoin Core's relay policy vision, prompted by recent mischaracterizations of a policy change."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Darosior to draft a short statement for the Bitcoin Core website outlining the project's approach to relay policy."
+    ],
+    "mentioned_prs": [
+      32317,
+      32427,
+      31553,
+      31622,
+      31244,
+      448,
+      450,
+      155,
+      153,
+      32406
+    ],
+    "_text_hash": "d42c09818c1328a3220eef8e741e8e23"
+  },
+  {
+    "date": "2025-05-08",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-05-08_16_00.log.json",
+    "participant_count": 26,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "laanwj",
+      "jonatack",
+      "Murch[m]"
+    ],
+    "topics_discussed": [
+      "Updates from various Working Groups including Cluster Mempool, Erlay, MuSig2, Orphan Resolution, Script Validation, and QML GUI.",
+      "Completion of the Legacy Wallet Removal project, with PR #28710 having been merged.",
+      "Discussion on the proposal to move the main Bitcoin Core repository to the `bitcoin-core` GitHub organization."
+    ],
+    "decisions_made": [
+      "The Legacy Wallet Removal project is considered complete and will be removed from the weekly updates list.",
+      "The proposal to move the main Bitcoin Core repository to the `bitcoin-core` GitHub organization was punted, with further discussion to be held at a future Coredev meeting."
+    ],
+    "action_items": [
+      "Reviewers are encouraged to make progress on Cluster Mempool PR #31444.",
+      "Reviewers are requested to review QML GUI PRs, specifically #424 and #870.",
+      "WG representatives are asked to contact stickies-v or glozow to host upcoming review clubs.",
+      "Schedule further discussion on moving the main Bitcoin Core repository for a future Coredev meeting."
+    ],
+    "mentioned_prs": [
+      31444,
+      31622,
+      31244,
+      28710,
+      448,
+      450,
+      424,
+      870,
+      32317
+    ],
+    "_text_hash": "474d80fd45005561d087c62cd62eeb47"
+  },
+  {
+    "date": "2025-05-01",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-05-01_16_00.log.json",
+    "participant_count": 29,
+    "key_participants": [
+      "achow101",
+      "instagibbs",
+      "darosior",
+      "glozow",
+      "Sjors[m]"
+    ],
+    "topics_discussed": [
+      "Updates from Cluster Mempool, Stratum v2, MuSig2, Legacy Wallet Removal, Orphan Resolution, and QML GUI working groups.",
+      "Discussion on the proposal to move the `bitcoin/bitcoin` repository to the `bitcoin-core` organization.",
+      "Debate and decision-making regarding the future direction of OP_RETURN policy.",
+      "Communication strategy for policy changes, particularly concerning the OP_RETURN discussion."
+    ],
+    "decisions_made": [
+      "The discussion on moving the `bitcoin/bitcoin` repository will be punted for another week.",
+      "A document/write-up explaining the rationale for the chosen OP_RETURN policy direction will be drafted."
+    ],
+    "action_items": [
+      "Review multiprocess code for Stratum v2.",
+      "Review MuSig2 PR #31244.",
+      "Review Legacy Wallet Removal PR #28710.",
+      "Merge QML GUI PR bitcoin-core/gui-qml#448.",
+      "achow101 to add the repository move as a topic again next week and encourage comments on issue #32340.",
+      "instagibbs, pinheadmz, TheCharlatan, and glozow to collaborate on drafting a document/write-up explaining the OP_RETURN policy direction and rationale.",
+      "Decide on the publication location for the OP_RETURN policy document after it is written."
+    ],
+    "mentioned_prs": [
+      31243,
+      31244,
+      31250,
+      28710,
+      448
+    ],
+    "_text_hash": "a14b9b7f9e43bde696d6d9fc11319fe8"
+  },
+  {
+    "date": "2025-04-24",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-04-24_16_00.log.json",
+    "participant_count": 21,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "laanwj",
+      "darosior",
+      "fanquake"
+    ],
+    "topics_discussed": [
+      "Updates from various working groups including Erlay, Kernel, MuSig2, Legacy Wallet Removal, QML GUI, Script Validation, and Cluster Mempool.",
+      "Key progress highlighted in the Kernel WG with Floresta client integration and a new PR for UTXO set separation.",
+      "Significant research and development in the Cluster Mempool WG, including new linearization algorithms and an upcoming PR.",
+      "Proposal to move the `bitcoin/bitcoin` repository to the `bitcoin-core` GitHub organization to resolve moderation conflicts and streamline administration.",
+      "Extensive discussion on the risks and benefits of the repository move, particularly concerning GitHub redirects and organizational ownership."
+    ],
+    "decisions_made": [
+      "No immediate decision was made regarding the proposed repository move; further discussion is deferred to the next meeting."
+    ],
+    "action_items": [
+      "achow101 will re-add the repository move proposal as a topic for next week's meeting.",
+      "TheCharlatan is seeking review on PR #31382 and Approach ACKs on PR #30595.",
+      "achow101 is seeking review on PRs #31622 and #31244.",
+      "fjahr is seeking approach feedback on PR #29491.",
+      "sipa plans to open a PR to implement the spanning-forest linearization algorithm in the next week or so."
+    ],
+    "mentioned_prs": [
+      31382,
+      30595,
+      32317,
+      31243,
+      31247,
+      31622,
+      31244,
+      31250,
+      448,
+      29491,
+      31444
+    ],
+    "_text_hash": "2e93bff7df356662dcbf9544bb368e41"
+  },
+  {
+    "date": "2025-04-17",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-04-17_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "glozow",
+      "sr_gi[m]",
+      "TheCharlatan"
+    ],
+    "topics_discussed": [
+      "Kernel Working Group update, seeking reviews for specific PRs.",
+      "Cluster Mempool Working Group update, including benchmarking of the spanning-forest algorithm for transaction linearization.",
+      "Erlay Working Group update, with functional tests completed and Warnet setup for real-node simulations underway.",
+      "MuSig2 and Legacy Wallet Removal Working Groups updates, with rebased PRs ready for review.",
+      "Orphan Resolution Working Group update, detailing progress on the TxOrphanage rewrite using a multi-index container and new eviction algorithm."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Review #31382 (Kernel WG).",
+      "Provide Approach ACKs on #30595 (Kernel WG).",
+      "Review #31444 (Cluster Mempool WG).",
+      "Attend next week's review club for #31444 (Cluster Mempool WG).",
+      "Review #30116 (Erlay WG).",
+      "Consider compiling and testing the full-Erlay implementation from #30277.",
+      "Review #31243 (MuSig2 WG).",
+      "Review #31622 (MuSig2 WG).",
+      "Review #31250 (Legacy Wallet Removal WG)."
+    ],
+    "mentioned_prs": [
+      31382,
+      30595,
+      31444,
+      30277,
+      30116,
+      31243,
+      31622,
+      31250
+    ],
+    "_text_hash": "b81bbb62095e1223fd8e83c6c2235b6d"
+  },
+  {
+    "date": "2025-04-10",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-04-10_16_00.log.json",
+    "participant_count": 17,
+    "key_participants": [
+      "ryanofsky",
+      "Sjors[m]",
+      "achow101",
+      "fanquake",
+      "cfields"
+    ],
+    "topics_discussed": [
+      "Working Group updates for Erlay, Kernel, Cluster Mempool, MuSig2, Legacy Wallet Removal, Multiprocess, and Orphan Resolution.",
+      "Discussion on integrating IPC binaries (bitcoin-node, bitcoin-gui) and a 'bitcoin' wrapper executable for a Stratum v2 mining interface in upcoming releases.",
+      "Debate on default build options for multiprocess features and the documentation strategy for the new 'bitcoin' wrapper."
+    ],
+    "decisions_made": [
+      "Multiprocess features, including the 'bitcoin' wrapper, will be enabled by default in CMake for both release and developer builds, contingent on PR #31741 being merged."
+    ],
+    "action_items": [
+      "sr_gi: Complete Erlay functional test redesign and begin Warnet testing.",
+      "TheCharlatan: Seek Approach ACKs for Kernel API PR #30595.",
+      "achow101: Rebase MuSig2 PRs and address comments.",
+      "achow101: Investigate PR #31250 regarding legacy wallet creation with SQLite.",
+      "cfields: Re-review and likely ACK Multiprocess PR #31741.",
+      "glozow: Push orphanage rewrite to PR #31829 soon.",
+      "ryanofsky: Add documentation recommending the 'bitcoin' wrapper executable.",
+      "Sjors[m]: Update PR #31802 to enable multiprocess for developer builds."
+    ],
+    "mentioned_prs": [
+      30116,
+      30595,
+      31444,
+      31250,
+      31741,
+      31829,
+      31756,
+      31375,
+      19461,
+      31802
+    ],
+    "_text_hash": "14a01e5b29464b4fbe729d5376df3423"
+  },
+  {
+    "date": "2025-04-03",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-04-03_16_00.log.json",
+    "participant_count": 14,
+    "key_participants": [
+      "pinheadmz",
+      "TheCharlatan",
+      "johnny9dev",
+      "sipa",
+      "sr_gi[m]"
+    ],
+    "topics_discussed": [
+      "Erlay WG progress, specifically dusting PR #30277 for Warnet testing.",
+      "Cluster Mempool updates, with PR #31444 identified as the next major review item.",
+      "Kernel WG discussion on API design, proposing a C++ API first approach for PR #30595 to facilitate C API separation.",
+      "QML GUI development, including progress on the Coin Selection page (PR #448) and initial work on multiple recipients.",
+      "Multiprocess work, with a general call for reviews on PRs tracked under issue #28722."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "sr_gi to continue preparing Erlay PR #30277 for Warnet testing.",
+      "Review PR #31444 (cluster mempool: add txgraph diagrams/mining/eviction).",
+      "TheCharlatan to continue work on the C++ API rewrite for kernel PR #30595.",
+      "johnny9dev to resolve bugs in QML GUI PR #448 and open a PR for 'multiple recipients' by end of week.",
+      "Review PRs related to Multiprocess work, tracked under issue #28722.",
+      "johnny9dev to add pinheadmz to the QML Signal group."
+    ],
+    "mentioned_prs": [
+      30277,
+      31444,
+      31363,
+      30595,
+      448,
+      28722
+    ],
+    "_text_hash": "46eba8d467bed77ad1cfd8862aa816dd"
+  },
+  {
+    "date": "2025-03-27",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-03-27_16_00.log.json",
+    "participant_count": 18,
+    "key_participants": [
+      "glozow",
+      "sipa",
+      "TheCharlatan",
+      "laanwj",
+      "sr_gi[m]"
+    ],
+    "topics_discussed": [
+      "Erlay WG Update: Progress on Erlay PRs (#30116, #30277) and plans for Warnet simulations.",
+      "Kernel WG Update: Discussion on C vs C++ header API for bitcoinkernel (#30595) and updates on bitcoin-chainstate cleanup (#31382).",
+      "QML GUI WG Update: Merged Send form (gui-qml#445), opened Coin Selection PR (gui-qml#448), and ongoing design discussions.",
+      "Cluster Mempool WG Update: TxGraph PR merged (#31363), follow-up PRs (#31444, #32151), and promising research on min-cut algorithm.",
+      "Release 29.0 and Website/Packaging Status: Reminder to test RC2 for 29.0, and concerns about Snap and bitcoin.org being stuck on older releases (27.x)."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "laanwj to add a comment to PR #30595 regarding C vs C++ header API.",
+      "johnny9dev to open a PR for the multiple recipients form and work on merging gui-qml#441 and gui-qml#434.",
+      "laanwj to contact cobra regarding updating bitcoin.org from 27.x releases.",
+      "stickies-v to leave a review on bitcoin-dot-org/Bitcoin.org/pull/4349 for more visibility."
+    ],
+    "mentioned_prs": [
+      30116,
+      30277,
+      30595,
+      31382,
+      445,
+      448,
+      441,
+      434,
+      31689,
+      29491,
+      31363,
+      31444,
+      32151,
+      32149,
+      31250,
+      31741,
+      31992,
+      248,
+      4349
+    ],
+    "_text_hash": "0a852f4332c5084715a906a23c1fdbc6"
+  },
+  {
+    "date": "2025-03-20",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-03-20_16_00.log.json",
+    "participant_count": 15,
+    "key_participants": [
+      "fjahr",
+      "johnny9dev",
+      "sipa",
+      "darosior",
+      "jon_atack"
+    ],
+    "topics_discussed": [
+      "Updates from Erlay, Kernel, Cluster Mempool, Legacy Wallet Removal, and QML GUI working groups.",
+      "Discussion on the scope of C bindings for the Kernel project, including potential externalization.",
+      "Formation of a new Script Validation WG to focus on batch validation, script improvements, and benchmarking.",
+      "Progress on the QML GUI, with several PRs merged and upcoming features like coin control and multi-output sends.",
+      "An upcoming ASMap run was announced for 2025-03-21, inviting community participation due to recent performance improvements."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "sr_gi to continue updating the Erlay patch for PR #30116.",
+      "TheCharlatan to gather more perspectives on the Kernel WG C bindings scope discussion (PR #30595 comments).",
+      "achow101 to rebase Legacy Wallet Removal PR #31250.",
+      "johnny9dev to PR context menu popups for QML GUI by the end of the week, and prioritize multiple outputs, address/amount formatting, and activity list pagination.",
+      "fjahr to invite interested participants (sipa, darosior, dergoegge, furszy, sr_gi) to the new Script Validation WG signal channel.",
+      "All participants encouraged to build and test the release candidate.",
+      "Interested participants to join the ASMap run on 2025-03-21 and seek assistance if encountering issues with kartograf setup."
+    ],
+    "mentioned_prs": [
+      30116,
+      30595,
+      31363,
+      31961,
+      31250,
+      447,
+      435,
+      418,
+      442,
+      445,
+      1134,
+      31689,
+      29491,
+      28792
+    ],
+    "_text_hash": "de9b32c793a9fbdc9b02e88df090b39e"
+  },
+  {
+    "date": "2025-03-13",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-03-13_16_00.log.json",
+    "participant_count": 20,
+    "key_participants": [
+      "glozow",
+      "Sjors[m]",
+      "rkrux",
+      "sipa",
+      "TheCharlatan"
+    ],
+    "topics_discussed": [
+      "Working Group Updates: Erlay, Fuzzing, Kernel, and Cluster Mempool.",
+      "Development Progress on Stratum v2, Multiprocess, MuSig2, and Legacy Wallet Removal.",
+      "Bitcoin Core 29.0 Release Candidate 1 Announcement and Testing Guide."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Test Erlay PR #30116 on Warnet to validate simulation results.",
+      "Review Kernel PR #31382 for ChainstateManager destructor flushing.",
+      "Review Cluster Mempool PRs, especially the initial one.",
+      "Review MuSig2 PRs: #31243 (refactor), #31247 (PSBT fields), and #31622 (sighash types).",
+      "Fire up Guix builds for Bitcoin Core 29.0 RC1.",
+      "Provide feedback on the 29.0 Release Candidate Testing Guide."
+    ],
+    "mentioned_prs": [
+      30116,
+      31382,
+      31283,
+      31375,
+      31741,
+      31243,
+      31247,
+      31622,
+      31961,
+      31250,
+      31785
+    ],
+    "_text_hash": "ea10bf97bb5be11fcd2a4f6445168126"
+  },
+  {
+    "date": "2025-03-06",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-03-06_16_00.log.json",
+    "participant_count": 21,
+    "key_participants": [
+      "achow101",
+      "glozow",
+      "TheCharlatan",
+      "jarolrod",
+      "stickies-v"
+    ],
+    "topics_discussed": [
+      "Erlay Working Group Update: Promising simulation results, moving to real node testing with Warnet.",
+      "Kernel API Working Group Update: Current API unlikely for 30.0 release; focus on merging it over months for application building and feedback, with a 'big branch' planned for changes.",
+      "MuSig2 and Legacy Wallet Removal Working Group Updates: Progress on MuSig2 PSBT PRs and rebased legacy wallet deletion PRs.",
+      "29.0 Release Milestone: Branch-off delayed a few days, pending final reviews for #31960 and #31161, and completion of release notes.",
+      "Review Club and Cluster Mempool Updates: Discussion on review club format and hosting, and progress on cluster mempool's TxGraph PR and min-cut linearization research."
+    ],
+    "decisions_made": [
+      "The current Kernel API is not likely to be shipped in the upcoming 30.0 release.",
+      "The 29.0 release branch-off will be delayed a few days, rather than happening today.",
+      "An RC testing guide meeting for 29.0 is aimed for March 19."
+    ],
+    "action_items": [
+      "sr_gi[m] to implement changes on the open Erlay PR for real node testing with Warnet.",
+      "TheCharlatan to work on a separate 'big branch' with desired changes to shape the Kernel API.",
+      "Review and merge legacy wallet removal PRs (#31250, #28710) and the sqlite requirement PR (#31961) to reduce scope.",
+      "QML GUI activity and send work to wrap up soon, and core dev demo items to be in the repo by the next IRC meeting.",
+      "Add release notes and check names in the credits for the 29.0 release.",
+      "hebasto to provide a CMake note and sipa to provide a -O3 note for 29.0 release notes.",
+      "jon_atack to update the seeds pull (#31960).",
+      "dergoegge to occasionally give updates on the functional fuzz test effort.",
+      "Working groups are encouraged to propose and host PR review clubs."
+    ],
+    "mentioned_prs": [
+      31622,
+      31247,
+      31243,
+      31961,
+      31250,
+      28710,
+      31829,
+      31960,
+      31161,
+      31363
+    ],
+    "_text_hash": "42a7b26ced511eec5d2ec1e4795db068"
+  },
+  {
+    "date": "2025-02-20",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-02-20_16_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "achow101",
+      "glozow",
+      "jarolrod",
+      "sipa",
+      "Murch[m]"
+    ],
+    "topics_discussed": [
+      "Working Group Updates: Erlay, Cluster Mempool, Kernel, MuSig2, Legacy Wallet Removal, and Orphan Resolution",
+      "Bitcoin Core 29.0 Feature Freeze and Milestone Status, focusing on remaining build system PRs",
+      "QML GUI Working Group Update, including its role as a Qt Widgets GUI replacement and future ambitions like Android support",
+      "Call for Review and Feedback on BIP3, the new BIP Process Proposal"
+    ],
+    "decisions_made": [
+      "Orphan resolution PR #31829 was removed from the v29 milestone due to being rushed and needing further work.",
+      "The checkpoints removal PR #31649 will be merged after the v29 branch off to allow for more testing and mitigate potential security model changes.",
+      "There will be no IRC meeting next week."
+    ],
+    "action_items": [
+      "sr_gi to share more concrete results for Erlay once written down.",
+      "Reviewers to look at Kernel WG PR #31382.",
+      "Reviewers to look at MuSig2 PRs #31622, #31243, and #31247.",
+      "Reviewers to look at Legacy Wallet Removal PRs #31250 and #28710.",
+      "dzxzg and stickies-v to review UPnP issue PR #31916.",
+      "glozow to consider reviewing Wallet PR #29278.",
+      "jonatack to open a PR for hardcoded DNS seed updates before RC1/branch off.",
+      "Murch[m] invites review and feedback on BIP3 PR #1712 (on bitcoin/bips), with jonatack starting the review.",
+      "Join the QML GUI WG for discussions on the bitcoincore.org website redesign."
+    ],
+    "mentioned_prs": [
+      31363,
+      31382,
+      31622,
+      31243,
+      31247,
+      31495,
+      31250,
+      28710,
+      31829,
+      445,
+      31161,
+      31407,
+      30861,
+      31662,
+      31884,
+      843,
+      31916,
+      31649,
+      29278,
+      1712
+    ],
+    "_text_hash": "defddea0e1290b037884ab46a8d95d7a"
+  },
+  {
+    "date": "2025-02-13",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-02-13_16_00.log.json",
+    "participant_count": 21,
+    "key_participants": [
+      "achow101",
+      "glozow",
+      "jarolrod",
+      "sipa",
+      "Sjors[m]"
+    ],
+    "topics_discussed": [
+      "Working Group Updates (Erlay, Kernel, Cluster Mempool, MuSig2, Legacy Wallet Removal, Orphan Resolution, Stratum v2)",
+      "Establishment of a QML GUI Working Group",
+      "v29.0 Milestone coordination and feature freeze planning"
+    ],
+    "decisions_made": [
+      "A QML GUI Working Group was announced and established.",
+      "Jarolrod was added to the list for weekly updates regarding the QML GUI Working Group.",
+      "A Jitsi call for 'Kill-Shill-Merge' for v29.0 milestone PRs will be held immediately after the IRC meeting."
+    ],
+    "action_items": [
+      "Sr_gi to continue reworking the Erlay simulator for planned experiments.",
+      "Marcofleon to continue cleaning up the Erlay implementation and improving fuzz tests.",
+      "Sipa recommends waiting for the next push on #28676 (Cluster mempool implementation) before testing/reviewing.",
+      "Glozow requests 1-2 more reviewers for #31829 (orphanage DoS limits).",
+      "Sjors requests extra eyes on #31283 and #31785 (Stratum v2 Template Provider interface changes).",
+      "Sjors encourages testing of IPC-enabled binaries for the Stratum v2 Template Provider.",
+      "Jarolrod to provide an initial update for the QML GUI WG next week.",
+      "Interested parties to DM jarolrod to join the QML GUI Working Group.",
+      "Attendees (especially authors of milestone PRs) to join the Jitsi call for v29.0 milestone review.",
+      "Darosior to test build system PRs and confirm llvm-based coverage correctness."
+    ],
+    "mentioned_prs": [
+      31363,
+      28676,
+      31247,
+      1764,
+      31622,
+      31495,
+      31250,
+      31829,
+      31283,
+      31785,
+      31741,
+      31762
+    ],
+    "_text_hash": "1ed7f1e7f0e65438ef28bf39f56241f3"
+  },
+  {
+    "date": "2025-02-06",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-02-06_16_00.log.json",
+    "participant_count": 21,
+    "key_participants": [
+      "glozow",
+      "sipa",
+      "ajonas",
+      "stickies-v",
+      "cfields"
+    ],
+    "topics_discussed": [
+      "Erlay and Orphan Resolution Working Group Updates",
+      "Cluster Mempool and Legacy Wallet Removal Updates",
+      "Bitcoin Core Contributor Survey Results and Discussion",
+      "v29.0 Release Priorities and Upcoming Feature Freeze"
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "Participants are encouraged to review PRs for the upcoming v29.0 release."
+    ],
+    "mentioned_prs": [
+      31810,
+      31363,
+      31495
+    ],
+    "_text_hash": "1a20112e9133a8cc26982afa9da29b95"
+  },
+  {
+    "date": "2025-01-30",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-01-30_16_00.log.json",
+    "participant_count": 24,
+    "key_participants": [
+      "sipa",
+      "achow101",
+      "darosior",
+      "glozow",
+      "Sjors[m]"
+    ],
+    "topics_discussed": [
+      "Erlay WG update: A new variable fanout rate approach, proposed by Murch, significantly reduces transaction propagation latency with minimal bandwidth impact.",
+      "Updates from various working groups including Kernel API, Cluster Mempool, Stratum v2, MuSig2, Legacy Wallet Removal, and Orphan Resolution.",
+      "Introduction of weekly mutation testing reports for Bitcoin Core, published at bitcoincore.space, covering critical parts of the codebase.",
+      "Initiation of a discussion on the mid to long-term goals and scope of the Bitcoin Core project, addressing resource limitations, increasing project scope, and maintaining software quality."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "sr_gi to decide on modifying Poisson timers for Erlay or finding an alternative solution.",
+      "TheCharlatan is seeking review for PR #31382 (Kernel: Flush in ChainstateManager destructor).",
+      "Sjors suggested reviewing PR #31283 (Add waitNext() to BlockTemplate interface).",
+      "achow101 plans to write PSBT test vectors for MuSig2.",
+      "achow101 needs to address review comments on PR #31495 (wallet: Utilize IsMine() and CanProvide() in migration).",
+      "glozow is working on a per-peer orphanage branch and aims to merge PR #31666 (multi-peer orphan resolution followups).",
+      "darosior encouraged attendees to reflect on 'What should be the scope of the project' and 'What should be Bitcoin Core's mission' before the Coredev meeting.",
+      "darosior will compile more thoughts and data/examples regarding the project scope issue for the Coredev meeting.",
+      "sipa encouraged contributors to provide specific examples of maintenance costs related to project scope."
+    ],
+    "mentioned_prs": [
+      31382,
+      28676,
+      31756,
+      31283,
+      31384,
+      31243,
+      31241,
+      31495,
+      31666,
+      29749,
+      31407
+    ],
+    "_text_hash": "255dc7970b8be9b55704e675ae92321b"
+  },
+  {
+    "date": "2025-01-23",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-01-23_16_00.log.json",
+    "participant_count": 27,
+    "key_participants": [
+      "achow101",
+      "Sjors[m]",
+      "sipa",
+      "fanquake",
+      "glozow"
+    ],
+    "topics_discussed": [
+      "Cluster Mempool Development Progress",
+      "MuSig2 and Legacy Wallet Removal Working Group Updates",
+      "Orphan Resolution Improvements and Testing Requests",
+      "Discussion on Including Multiprocess Binaries in Release Builds",
+      "v29.0 Release Schedule and Feature Freeze"
+    ],
+    "decisions_made": [
+      "The v29.0 feature freeze date will remain February 20.",
+      "The discussion regarding including multiprocess binaries in the release build will be deferred to v30."
+    ],
+    "action_items": [
+      "Glozow to write notes for the #31363 review club meeting on February 5.",
+      "Achow101 to take another look at #31241 for RFM.",
+      "Glozow to get #31666 up as soon as possible.",
+      "Achow101 and darosior to set up mainnet nodes for testing #31666 with `TXPACKAGES` logging.",
+      "Further discussion on multiprocess binaries (e.g., vendoring, enabling in dev builds by default) to continue outside the meeting and potentially at coredev for v30."
+    ],
+    "mentioned_prs": [
+      31553,
+      31363,
+      31242,
+      31622,
+      31247,
+      31243,
+      31495,
+      31241,
+      31666,
+      31397,
+      30975,
+      31375,
+      31029
+    ],
+    "_text_hash": "5221b11b2b7eae632157dc2bc53c007b"
+  },
+  {
+    "date": "2025-01-16",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-01-16_14_00.log.json",
+    "participant_count": 16,
+    "key_participants": [
+      "glozow",
+      "achow101",
+      "cfields",
+      "sipa",
+      "core-meetbot"
+    ],
+    "topics_discussed": [
+      "Updates from various working groups including Erlay, Kernel, Benchmarking, Silent Payments, Cluster Mempool, MuSig2, Legacy Wallet Removal, and Orphan Resolution.",
+      "Discussion and decision regarding a new weekly meeting time.",
+      "A quick notice about upcoming changes and improvements to the build-system.",
+      "Consideration of a secp256k1 sprint week in March for Silent Payments."
+    ],
+    "decisions_made": [
+      "The weekly meeting time will change to 16:00 UTC, starting January 23rd, 2025."
+    ],
+    "action_items": [
+      "sr_gi[m] to process collected data for Erlay fanout peer selection.",
+      "Novo and josie to pick back up batch validation benchmarking.",
+      "josie to rebase Silent Payments PRs this week and next.",
+      "achow101 to address comments on PR #31495 next week.",
+      "cfields to provide updates on build-system changes in future meetings once breaking changes are merged.",
+      "Review requested for PRs #31382, #31363, #31242, #31243, and #31666."
+    ],
+    "mentioned_prs": [
+      31382,
+      31363,
+      31242,
+      31243,
+      31495,
+      31397,
+      31666
+    ],
+    "_text_hash": "03a6484947f5cb0a875669a5cc689d12"
+  },
+  {
+    "date": "2025-01-09",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-01-09_14_00.log.json",
+    "participant_count": 25,
+    "key_participants": [
+      "achow101",
+      "glozow",
+      "core-meetbot",
+      "sipa",
+      "dergoegge"
+    ],
+    "topics_discussed": [
+      "Erlay WG: Ongoing simulations to determine optimal fanout proportion, balancing bandwidth and latency.",
+      "MuSig2 WG: Identified and addressed sighash type conflicts, with related PRs (#31622, #31242, #31243) open for review.",
+      "Package Relay WG: Progress on orphan transaction resolution PRs (#31397, #31385) and updated documentation, with a suggestion to rename the subproject to \"Tx Orphan Resolution\".",
+      "Meeting Time Adjustment: Discussion on moving the meeting time later by 3 hours to accommodate US West Coast participants, with a poll initiated to gather preferences.",
+      "Cluster Mempool WG: Rebasing efforts for cluster mempool implementation (#28676) on txgraph PRs (#31363, #31444, #31553), and future plans for a new cluster linearization algorithm."
+    ],
+    "decisions_made": [
+      "Decision on adjusting the meeting time is deferred to next week, pending results from a participant poll."
+    ],
+    "action_items": [
+      "sr_gi to continue Erlay simulations and aim for conclusions on fanout proportion by the next one or two meetings.",
+      "Review MuSig2 related PRs #31242 and #31243.",
+      "Review Legacy Wallet Removal PR #31495.",
+      "Review Package Relay PRs #31397 and #31385.",
+      "All participants to fill out the rallly.co poll for meeting time adjustment by next week.",
+      "Review Cluster Mempool txgraph PRs #31363, #31444, and #31553.",
+      "achow101 to review PRs #21590 and #31549.",
+      "sipa to address open questions on PR #21590."
+    ],
+    "mentioned_prs": [
+      31622,
+      31242,
+      31243,
+      31495,
+      31397,
+      31385,
+      28676,
+      31363,
+      31444,
+      31553,
+      21590,
+      31549
+    ],
+    "_text_hash": "3de06d5e4b4544c0c995979952104328"
+  },
+  {
+    "date": "2025-01-02",
+    "url": "https://achow101.com/ircmeetings/2025/bitcoin-core-dev.2025-01-02_14_00.log.json",
+    "participant_count": 9,
+    "key_participants": [
+      "achow101",
+      "sipa",
+      "sr_gi[m]",
+      "core-meetbot",
+      "TheCharlatan"
+    ],
+    "topics_discussed": [
+      "Erlay Working Group Update: Simulations confirm design simplification, next steps for implementation and warnet testing.",
+      "Cluster Mempool Working Group Update: Focus on PR #31363 for review, ongoing research into a new, efficient linearization algorithm.",
+      "MuSig2 Working Group Update: PR #31242 remains open for review.",
+      "Legacy Wallet Removal Working Group Update: PR #31495 remains open for review."
+    ],
+    "decisions_made": [],
+    "action_items": [
+      "sr_gi to continue Erlay simulations and update the relevant PR.",
+      "sr_gi to coordinate with Gleb on Erlay full implementation and warnet testing.",
+      "Review Cluster Mempool PR #31363.",
+      "sipa to continue experimenting with the new Cluster Mempool linearization algorithm.",
+      "Review MuSig2 PR #31242.",
+      "Review Legacy Wallet Removal PR #31495."
+    ],
+    "mentioned_prs": [
+      31363,
+      31242,
+      31495
+    ],
+    "_text_hash": "986bfc07e806c8794bcbb05cc65b06f8"
+  }
+]
