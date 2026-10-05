@@ -13,3 +13,6 @@ PRODUCT_VISION.md
 
 .DS_Store
 docs/output
+
+# Generated per run by python/automation/jobs/orange_dev/twib_slides.py (capture input only)
+docs/data/slides/

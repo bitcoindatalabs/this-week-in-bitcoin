@@ -1,0 +1,51 @@
+/*
+ * twib-slides.css — layout specific to the TWIB weekly + dev meeting slides.
+ * Generic components (frame, cards, KPI tiles, lists, bars) come from slide-kit.generated.css;
+ * colours only from palette-twib.generated.css tokens.
+ */
+
+/* ---------- Weekly slide 1 ---------- */
+.theme { padding: 10px 0; border-top: 1px solid var(--grid-color); }
+.theme:first-of-type { border-top: 0; padding-top: 2px; }
+.theme-title { font-family: var(--font-display); font-size: 19px; font-weight: 600; line-height: 1.25; color: var(--text-strong-resolved); }
+.theme-text { font-size: 13px; line-height: 1.5; color: var(--muted-text); margin-top: 4px; }
+
+.callout { justify-content: flex-start; }
+.callout-note { margin-top: auto; font-size: 11px; color: var(--dim-text); padding-top: 10px; }
+
+.release { flex-direction: row; }
+.release b { color: var(--text-strong-resolved); }
+.release .mono { font-size: 12px; color: var(--muted-text); }
+
+/* ---------- Weekly slide 2 ---------- */
+.area-dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; }
+.item-meta .chip { font-size: 9.5px; padding: 1px 6px; }
+.hbar-row.upkeep > span:first-child { color: var(--muted-text); }
+.split-legend { display: flex; gap: 16px; margin-top: 7px; font-size: 11.5px; color: var(--muted-text); }
+.split-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+
+/* ---------- Weekly slide 3 ---------- */
+.chip.delving { color: var(--series-1); border-color: color-mix(in srgb, var(--series-1) 35%, transparent); }
+.chip.ml { color: var(--series-4); border-color: color-mix(in srgb, var(--series-4) 35%, transparent); }
+.cols-2 > .item { border-top: 0; padding-top: 0; }
+
+/* ---------- Meeting slide ---------- */
+.meeting-stats { display: flex; align-items: center; gap: 18px; margin-top: 12px; font-size: 13px; color: var(--muted-text); }
+.meeting-stats b { color: var(--text-strong-resolved); font-family: var(--font-mono); }
+.meeting-stats .people { display: flex; flex-wrap: wrap; gap: 4px; margin-left: 6px; }
+.handle { font-size: 10.5px; padding: 1px 7px; border-radius: 999px; background: var(--badge-bg); border: 1px solid var(--card-border); color: var(--muted-text); }
+.side { display: flex; flex-direction: column; gap: 14px; min-height: 0; }
+.spot { font-size: 13px; line-height: 1.45; color: var(--text-color); }
+
+/* ---------- Round 2 ---------- */
+.theme-text { font-size: 13.5px; }
+.welcome { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--grid-color); font-size: 12.5px; color: var(--muted-text); }
+.welcome .chip { margin-right: 6px; }
+.signal-chart { margin-top: 16px; }
+.reviewers { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted-text); }
+.reviewers b { color: var(--text-strong-resolved); font-weight: 600; margin-right: 3px; }
+.priority { font-family: var(--font-display); font-size: 18px; font-weight: 600; line-height: 1.3; color: var(--text-strong-resolved); margin-bottom: 10px; }
+.ms-status { font-size: 12px; font-weight: 600; color: var(--muted-text); margin-bottom: 8px; }
+.disc { row-gap: 10px; }
+.disc .item-sum { font-size: 12px; }
+.meeting-stats > span:not(.people) { white-space: nowrap; flex: none; }

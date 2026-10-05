@@ -1,0 +1,17 @@
+/* AUTO-GENERATED from shared/media/palettes.py ('twib') — do not edit. */
+.report-theme.theme-twib {
+    --bg-color: #F1F2DC;
+    --card-bg: #FBFBF3;
+    --card-border: #DCDDBF;
+    --badge-bg: #ECEDD5;
+    --accent-color: #A9481F;
+    --accent-fill: #E8916B;
+    --accent-secondary: #F7931A;
+    --text-strong: #16191F;
+    --text-color: #2B2F37;
+    --muted-text: #535862;
+    --dim-text: #656A74;
+    --grid-color: #E6E7CF;
+    --positive: #2C6B33;
+    --negative: #B0281F;
+}
