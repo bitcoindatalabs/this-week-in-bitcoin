@@ -49,3 +49,6 @@
 .disc { row-gap: 10px; }
 .disc .item-sum { font-size: 12px; }
 .meeting-stats > span:not(.people) { white-space: nowrap; flex: none; }
+
+/* Summaries carry full sentences for the post text; the slide shows at most 2 lines */
+.item-sum { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
