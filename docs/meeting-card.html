@@ -532,8 +532,10 @@
                 return res.json();
             })
             .then(meetings => {
-                if (!Array.isArray(meetings) || meetings.length === 0) return;
-                const meeting = targetDate ? (meetings.find(m => m.date === targetDate) || meetings[0]) : meetings[0];
+                if (!Array.isArray(meetings) || meetings.length === 0) throw new Error("meetings.json is empty");
+                // A requested date must exist: silently showing another meeting would post the wrong card
+                const meeting = targetDate ? meetings.find(m => m.date === targetDate) : meetings[0];
+                if (!meeting) throw new Error(`No meeting found for ${targetDate}`);
                 
                 // 1. Date
                 const dateEl = document.getElementById('mcard-date');
@@ -665,8 +667,10 @@
                 document.body.setAttribute('data-loaded', 'true');
             })
             .catch(err => {
+                // "error" (not "true") so headless capture times out instead of screenshotting
+                // the "Loading..." placeholders, as happened on 2026-10-01
                 console.error("Hydration error:", err);
-                document.body.setAttribute('data-loaded', 'true');
+                document.body.setAttribute('data-loaded', 'error');
             });
     </script>
 </body>
